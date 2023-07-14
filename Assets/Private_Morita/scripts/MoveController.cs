@@ -22,8 +22,8 @@ public class MoveController : MonoBehaviour
         // ‚»‚ê‚¼‚ê+‚â-‚Ì’l‚Æ“ü—Í‚ÌŠÖ˜A•t‚¯‚ÍInput Manager‚Åİ’è‚³‚ê‚Ä‚¢‚é
         inputAxis.x = Input.GetAxis("Horizontal");
         inputAxis.y = Input.GetAxis("Vertical");
-        inputAxis.x = Input.
-        inputAxis.y = Input.Get
+        //inputAxis.x = Input.
+        //inputAxis.y = Input.Get
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(PunchPrefab, transform.position, Quaternion.identity);
