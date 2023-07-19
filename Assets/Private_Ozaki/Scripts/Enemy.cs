@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Enemy : MonoBehaviour
     private int index = 0;
     [SerializeField] private Transform[] route = new Transform[1];
 
+     public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,16 +27,24 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(this.transform.position, targetPoint.position) <= 0.25f) 
+        if (Vector2.Distance(this.transform.position, player.transform.position) <= 5f)
         {
-            this.index++;
+            targetPoint = player.transform;
+        }
 
-            if (index >= this.route.Length) 
+        else
+        {
+            if (Vector2.Distance(this.transform.position, targetPoint.position) <= 0.25f)
             {
-                index = 0;
-            }
+                this.index++;
 
-            targetPoint = this.route[index];
+                if (index >= this.route.Length)
+                {
+                    index = 0;
+                }
+
+                targetPoint = this.route[index];
+            }
         }
     }
 
