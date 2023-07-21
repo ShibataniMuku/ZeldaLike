@@ -10,29 +10,90 @@ public class MoveController : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Vector2 inputAxis;
 
+    //direction = 0 -> ä¸Š
+    //direction = 1 -> å³
+    //direction = 2 -> ä¸‹
+    //direction = 3 -> å·¦
+    public int direction = 0;
+
     void Start()
     {
-        // ƒIƒuƒWƒFƒNƒg‚Éİ’è‚µ‚Ä‚¢‚éRigidbody2D‚ÌQÆ‚ğæ“¾‚·‚é
+        // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«è¨­å®šã—ã¦ã„ã‚‹Rigidbody2Dã®å‚ç…§ã‚’å–å¾—ã™ã‚‹
         this.rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        // x,‚™‚Ì“ü—Í’l‚ğ“¾‚é
-        // ‚»‚ê‚¼‚ê+‚â-‚Ì’l‚Æ“ü—Í‚ÌŠÖ˜A•t‚¯‚ÍInput Manager‚Åİ’è‚³‚ê‚Ä‚¢‚é
-        inputAxis.x = Input.GetAxis("Horizontal");
-        inputAxis.y = Input.GetAxis("Vertical");
-        //inputAxis.x = Input.
-        //inputAxis.y = Input.Get
+        // x,ï½™ã®å…¥åŠ›å€¤ã‚’å¾—ã‚‹
+        // ãã‚Œãã‚Œ+ã‚„-ã®å€¤ã¨å…¥åŠ›ã®é–¢é€£ä»˜ã‘ã¯Input Managerã§è¨­å®šã•ã‚Œã¦ã„ã‚‹
+
+        //inputAxis.x = Input.GetAxis("Horizontal");
+        //inputAxis.y = Input.GetAxis("Vertical");
+
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            inputAxis.y = 1;
+            direction = 0;
+        }
+        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            inputAxis.y = -1;
+            direction = 2;
+        }
+        else
+        {
+            inputAxis.y = 0;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            inputAxis.x = 1;
+            direction = 1;
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            inputAxis.x = -1;
+            direction = 3;
+        }
+        else
+        {
+            inputAxis.x = 0;
+        }
+      //  Debug.Log("inoutAxis => " + this.inputAxis);
+       // inputAxis.x = Input.
+       // inputAxis.y = Input.Get
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(PunchPrefab, transform.position, Quaternion.identity);
+           GameObject g = Instantiate(PunchPrefab, transform.position, Quaternion.identity);
+
+            Vector2 vec2 = Vector2.zero;
+
+            //ã“ã“ã«ã€æ–¹å‘ï¼ˆdirectionï¼‰ã«ã‚ˆã£ã¦ã€vec2ã«å€¤ã‚’ä»£å…¥ã™ã‚‹å‡¦ç†ã‚’æ›¸ãã€‚
+
+            if (direction == 0)
+            {
+                vec2 = new Vector2(0, 1);
+            }
+            else if (direction == 1)
+            {
+                vec2 = new Vector2(1, 0);
+            }
+            else if (direction == 2)
+            {
+                vec2 = new Vector2(0, -1);
+            }
+            else if (direction == 3)
+            {
+                vec2 = new Vector2(-1, 0);
+            }
+            g.GetComponent<Rigidbody2D>().velocity = vec2 * 3;
         }
     }
 
     private void FixedUpdate()
     {
-        // ‘¬“x‚ğ‘ã“ü‚·‚é
+        // é€Ÿåº¦ã‚’ä»£å…¥ã™ã‚‹
         rigidBody.velocity = inputAxis.normalized * SPEED;
     }
 }
