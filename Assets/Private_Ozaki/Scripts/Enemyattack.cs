@@ -30,7 +30,6 @@ public class TamaToPlayer : MonoBehaviour
             //弾のプレハブの位置を敵の位置にする
             t.transform.position = pos;
             //敵からプレイヤーに向かうベクトルをつくる
-
             //プレイヤーの位置から敵の位置（弾の位置）を引く
             Vector2 vec = player.transform.position - pos;
             //弾のRigidBody2Dコンポネントのvelocityに先程求めたベクトルを入れて力を加える

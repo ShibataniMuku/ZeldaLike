@@ -1,3 +1,5 @@
+using Microsoft.Win32.SafeHandles;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +24,7 @@ public class Enemy : MonoBehaviour
         this.myRigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
 
         this.targetPoint = route[0];
+
     }
 
     // Update is called once per frame
@@ -32,22 +35,35 @@ public class Enemy : MonoBehaviour
             targetPoint = player.transform;
         }
 
-        else
+        if (Vector2.Distance(this.transform.position, targetPoint.position) <= 0.25f)
         {
-            if (Vector2.Distance(this.transform.position, targetPoint.position) <= 0.25f)
+            this.index++;
+
+            if (index >= this.route.Length)
             {
-                this.index++;
-
-                if (index >= this.route.Length)
-                {
-                    index = 0;
-                }
-
-                targetPoint = this.route[index];
+                index = 0;
             }
+
+            targetPoint = this.route[index];
+        }
+
+        if(this.moveSpeed <= 0)
+        {
+            // コルーチンの起動
+            StartCoroutine(DelayCoroutine());
         }
     }
+    // コルーチン本体
+    private IEnumerator DelayCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
 
+        moveSpeed = 3.0f;
+
+        yield return new WaitForSeconds(1.1f);
+
+        StopCoroutine(DelayCoroutine());
+    }
     private void FixedUpdate()
     {
         Vector2 direction = Vector2.zero;
@@ -57,5 +73,10 @@ public class Enemy : MonoBehaviour
         direction = (targetPoint.position - this.transform.position).normalized;
 
         this.myRigidbody2D.velocity = direction * this.moveSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        this.moveSpeed = 0;
     }
 }
