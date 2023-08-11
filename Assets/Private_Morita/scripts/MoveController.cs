@@ -24,6 +24,7 @@ public class MoveController : MonoBehaviour
 
     void Update()
     {
+
         // x,ｙの入力値を得る
         // それぞれ+や-の値と入力の関連付けはInput Managerで設定されている
 
@@ -62,6 +63,7 @@ public class MoveController : MonoBehaviour
       //  Debug.Log("inoutAxis => " + this.inputAxis);
        // inputAxis.x = Input.
        // inputAxis.y = Input.Get
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
