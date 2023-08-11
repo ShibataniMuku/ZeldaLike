@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Portal : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
+
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("Stage");
+            Debug.Log("ok");
         }
     }
     // Update is called once per frame

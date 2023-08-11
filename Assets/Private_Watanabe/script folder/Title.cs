@@ -16,7 +16,7 @@ public class Title : MonoBehaviour
         if(!firstPush)
      {
             Debug.Log("Go Next Scene!");
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("StageSelect");
             firstPush = true;
         }
     }
