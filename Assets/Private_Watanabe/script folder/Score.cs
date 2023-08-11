@@ -14,6 +14,7 @@ public class Score : MonoBehaviour
         scoreText = GetComponent<TextMeshProUGUI>();
         score = 0; 
         scoreText.text = "Score"; 
+
        
     }
 
@@ -21,7 +22,7 @@ public class Score : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score:" + score.ToString();
-
+        PlayerPrefs.SetInt("Score", score);
     }
     
 }
