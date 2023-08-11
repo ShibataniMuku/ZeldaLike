@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class TamaToPlayer : MonoBehaviour
+public class Enemyattack : MonoBehaviour
 {
 
     //プレイヤーオブジェクト
@@ -25,15 +25,14 @@ public class TamaToPlayer : MonoBehaviour
             currentTime = 0;
             //敵の座標を変数posに保存
             var pos = this.gameObject.transform.position;
-            //弾のプレハブを作成
-            var t = Instantiate(tama) as GameObject;
-            //弾のプレハブの位置を敵の位置にする
-            t.transform.position = pos;
             //敵からプレイヤーに向かうベクトルをつくる
             //プレイヤーの位置から敵の位置（弾の位置）を引く
-            Vector2 vec = player.transform.position - pos;
+            Vector3 vec = player.transform.position - pos;
+            //弾のプレハブを作成
+            GameObject t = Instantiate(tama, pos + vec.normalized * 1.5f, Quaternion.identity);
             //弾のRigidBody2Dコンポネントのvelocityに先程求めたベクトルを入れて力を加える
             t.GetComponent<Rigidbody2D>().velocity = vec;
+            Debug.Log(vec);
         }
     }
 }

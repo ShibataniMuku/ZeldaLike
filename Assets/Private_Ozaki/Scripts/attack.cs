@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class attack : MonoBehaviour
 {
     [Header("スピード")] public float speed = 3.0f;
     [Header("最大移動距離")] public float maxDistance = 100.0f;
@@ -31,10 +31,7 @@ public class EnemyAttack : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        else
-        {
-            rb.MovePosition(transform.position += transform.up * Time.deltaTime * speed);
-        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

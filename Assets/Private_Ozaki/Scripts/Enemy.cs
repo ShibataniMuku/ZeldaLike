@@ -30,11 +30,16 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(this.transform.position, player.transform.position) <= 5f)
+        float distance = Vector2.Distance(this.transform.position, player.transform.position);
+        if (distance <= 5f)
         {
             targetPoint = player.transform;
         }
-
+        else if(distance > 5f)
+        {
+            targetPoint = this.route[index];
+        }
+         
         if (Vector2.Distance(this.transform.position, targetPoint.position) <= 0.25f)
         {
             this.index++;
