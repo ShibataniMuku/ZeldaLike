@@ -10,22 +10,24 @@ public class MoveController : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Vector2 inputAxis;
 
-    //direction = 0 -> ã
-    //direction = 1 -> ‰E
-    //direction = 2 -> ‰º
-    //direction = 3 -> ¶
+    //direction = 0 -> ä¸Š
+    //direction = 1 -> å³
+    //direction = 2 -> ä¸‹
+    //direction = 3 -> å·¦
     public int direction = 0;
 
     void Start()
     {
-        // ƒIƒuƒWƒFƒNƒg‚Éİ’è‚µ‚Ä‚¢‚éRigidbody2D‚ÌQÆ‚ğæ“¾‚·‚é
+        // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«è¨­å®šã—ã¦ã„ã‚‹Rigidbody2Dã®å‚ç…§ã‚’å–å¾—ã™ã‚‹
         this.rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        // x,‚™‚Ì“ü—Í’l‚ğ“¾‚é
-        // ‚»‚ê‚¼‚ê+‚â-‚Ì’l‚Æ“ü—Í‚ÌŠÖ˜A•t‚¯‚ÍInput Manager‚Åİ’è‚³‚ê‚Ä‚¢‚é
+
+        // x,ï½™ã®å…¥åŠ›å€¤ã‚’å¾—ã‚‹
+        // ãã‚Œãã‚Œ+ã‚„-ã®å€¤ã¨å…¥åŠ›ã®é–¢é€£ä»˜ã‘ã¯Input Managerã§è¨­å®šã•ã‚Œã¦ã„ã‚‹
+
         //inputAxis.x = Input.GetAxis("Horizontal");
         //inputAxis.y = Input.GetAxis("Vertical");
 
@@ -69,7 +71,7 @@ public class MoveController : MonoBehaviour
 
             Vector2 vec2 = Vector2.zero;
 
-            //‚±‚±‚ÉA•ûŒüidirectionj‚É‚æ‚Á‚ÄAvec2‚É’l‚ğ‘ã“ü‚·‚éˆ—‚ğ‘‚­B
+            //ã“ã“ã«ã€æ–¹å‘ï¼ˆdirectionï¼‰ã«ã‚ˆã£ã¦ã€vec2ã«å€¤ã‚’ä»£å…¥ã™ã‚‹å‡¦ç†ã‚’æ›¸ãã€‚
 
             if (direction == 0)
             {
@@ -93,7 +95,7 @@ public class MoveController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // ‘¬“x‚ğ‘ã“ü‚·‚é
+        // é€Ÿåº¦ã‚’ä»£å…¥ã™ã‚‹
         rigidBody.velocity = inputAxis.normalized * SPEED;
     }
 }
