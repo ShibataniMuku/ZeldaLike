@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class pause : MonoBehaviour
 {
@@ -31,5 +34,14 @@ public class pause : MonoBehaviour
     {
         Time.timeScale = 1;
         pausePanel.SetActive(false);
+    }
+    public void StageSelect()
+    {
+        
+        SceneManager.LoadScene("StageSelect");
+    }
+    public void Setting()
+    {
+        
     }
 }
