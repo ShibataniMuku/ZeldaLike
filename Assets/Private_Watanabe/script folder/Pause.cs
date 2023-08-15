@@ -23,6 +23,7 @@ public class pause : MonoBehaviour
             {
                 Time.timeScale = 0;
                 pausePanel.SetActive(true);
+                Cursor.visible = true;
             }
             else
             {
@@ -34,6 +35,7 @@ public class pause : MonoBehaviour
     {
         Time.timeScale = 1;
         pausePanel.SetActive(false);
+        Cursor.visible = false;
     }
     public void StageSelect()
     {
