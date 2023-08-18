@@ -52,22 +52,28 @@ public class Enemy : MonoBehaviour
             targetPoint = this.route[index];
         }
 
-        if(this.moveSpeed <= 0)
+        if(this.moveSpeed <= 0 && isactiveCoroutine == false)
         {
             // コルーチンの起動
             StartCoroutine(DelayCoroutine());
         }
     }
+
+    bool isactiveCoroutine = false;
     // コルーチン本体
     private IEnumerator DelayCoroutine()
     {
+        Debug.Log("呼び出し");
+
+        isactiveCoroutine = true;
+
         yield return new WaitForSeconds(1f);
 
         moveSpeed = 3.0f;
 
         yield return new WaitForSeconds(1.1f);
 
-        StopCoroutine(DelayCoroutine());
+        isactiveCoroutine = false;
     }
     private void FixedUpdate()
     {

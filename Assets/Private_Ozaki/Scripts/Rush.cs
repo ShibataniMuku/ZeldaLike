@@ -51,41 +51,29 @@ public class Rush : MonoBehaviour
 
             targetPoint = this.route[index];
         }
-        
-        if (distance<=2.5f)
-        {
-            this.moveSpeed = 0;
-        }
 
-        if (this.moveSpeed <= 0)
+        if (this.moveSpeed <= 0 && isactiveCoroutine == false)
         {
             // コルーチンの起動
             StartCoroutine(DelayCoroutine());
-
-            
-
         }
     }
+
+    bool isactiveCoroutine = false;
     // コルーチン本体
     private IEnumerator DelayCoroutine()
     {
+        Debug.Log("呼び出し");
+
+        isactiveCoroutine = true;
+
         yield return new WaitForSeconds(1f);
-
-        moveSpeed = 5.0f;
-
-        
-
-        yield return new WaitForSeconds(1.5f);
-
-        moveSpeed = 0.01f;
-
-        yield return new WaitForSeconds(1.7f);
 
         moveSpeed = 3.0f;
 
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(1.1f);
 
-        StopCoroutine(DelayCoroutine());
+        isactiveCoroutine = false;
     }
     private void FixedUpdate()
     {
@@ -96,5 +84,10 @@ public class Rush : MonoBehaviour
         direction = (targetPoint.position - this.transform.position).normalized;
 
         this.myRigidbody2D.velocity = direction * this.moveSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        this.moveSpeed = 0;
     }
 }
