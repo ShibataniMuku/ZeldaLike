@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections;
@@ -24,7 +25,6 @@ public class Rush : MonoBehaviour
         this.myRigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
 
         this.targetPoint = route[0];
-
     }
 
     // Update is called once per frame
@@ -34,6 +34,11 @@ public class Rush : MonoBehaviour
         if (distance <= 5f)
         {
             targetPoint = player.transform;
+
+            if (distance <= 3f)
+            {
+                moveSpeed = 0;
+            }
         }
         else if (distance > 5f)
         {
@@ -69,9 +74,11 @@ public class Rush : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        moveSpeed = 3.0f;
+        moveSpeed = 3;
 
-        yield return new WaitForSeconds(1.1f);
+        GetComponent<Hontai>().enabled = true;
+
+        enabled = false;
 
         isactiveCoroutine = false;
     }
