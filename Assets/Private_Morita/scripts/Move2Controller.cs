@@ -2,35 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveController : MonoBehaviour
+public class Move2Controller : MonoBehaviour
 {
-    public GameObject PunchPrefab;
+    public GameObject punch2Prefab;
     [SerializeField]
     float SPEED = 1.0f;
     private Rigidbody2D rigidBody;
     private Vector2 inputAxis;
 
-    //direction = 0 -> ä¸Š
-    //direction = 1 -> å³
-    //direction = 2 -> ä¸‹
-    //direction = 3 -> å·¦
+    //direction = 0 -> ã
+    //direction = 1 -> ‰E
+    //direction = 2 -> ‰º
+    //direction = 3 -> ¶
     public int direction = 0;
-
+    // Start is called before the first frame update
     void Start()
     {
-        // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«è¨­å®šã—ã¦ã„ã‚‹Rigidbody2Dã®å‚ç…§ã‚’å–å¾—ã™ã‚‹
+        // ƒIƒuƒWƒFƒNƒg‚Éİ’è‚µ‚Ä‚¢‚éRigidbody2D‚ÌQÆ‚ğæ“¾‚·‚é
         this.rigidBody = GetComponent<Rigidbody2D>();
     }
 
+    // Update is called once per frame
     void Update()
     {
-
-        // x,ï½™ã®å…¥åŠ›å€¤ã‚’å¾—ã‚‹
-        // ãã‚Œãã‚Œ+ã‚„-ã®å€¤ã¨å…¥åŠ›ã®é–¢é€£ä»˜ã‘ã¯Input Managerã§è¨­å®šã•ã‚Œã¦ã„ã‚‹
-
-        //inputAxis.x = Input.GetAxis("Horizontal");
-        //inputAxis.y = Input.GetAxis("Vertical");
-
         if (Input.GetKey(KeyCode.W))
         {
             inputAxis.y = 1;
@@ -60,18 +54,14 @@ public class MoveController : MonoBehaviour
         {
             inputAxis.x = 0;
         }
-      //  Debug.Log("inoutAxis => " + this.inputAxis);
-       // inputAxis.x = Input.
-       // inputAxis.y = Input.Get
 
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-           GameObject g = Instantiate(PunchPrefab, transform.position, Quaternion.identity);
+            GameObject g = Instantiate(punch2Prefab, transform.position, Quaternion.identity);
 
             Vector2 vec2 = Vector2.zero;
 
-            //ã“ã“ã«ã€æ–¹å‘ï¼ˆdirectionï¼‰ã«ã‚ˆã£ã¦ã€vec2ã«å€¤ã‚’ä»£å…¥ã™ã‚‹å‡¦ç†ã‚’æ›¸ãã€‚
+            //‚±‚±‚ÉA•ûŒüidirectionj‚É‚æ‚Á‚ÄAvec2‚É’l‚ğ‘ã“ü‚·‚éˆ—‚ğ‘‚­B
 
             if (direction == 0)
             {
@@ -91,11 +81,5 @@ public class MoveController : MonoBehaviour
             }
             g.GetComponent<Rigidbody2D>().velocity = vec2 * 3;
         }
-    }
-
-    private void FixedUpdate()
-    {
-        // é€Ÿåº¦ã‚’ä»£å…¥ã™ã‚‹
-        rigidBody.velocity = inputAxis.normalized * SPEED;
     }
 }
