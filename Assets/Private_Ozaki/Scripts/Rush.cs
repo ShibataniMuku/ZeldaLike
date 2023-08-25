@@ -30,6 +30,7 @@ public class Rush : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("bb");
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
         if (distance <= 5f)
         {
