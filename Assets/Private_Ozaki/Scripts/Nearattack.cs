@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 using static UnityEngine.GraphicsBuffer;
 
 public class Nearattack : MonoBehaviour
@@ -43,11 +44,11 @@ public class Nearattack : MonoBehaviour
 
         if (distance <= 5f)
         {
-            targetPoint = player.transform;
+           targetPoint = player.transform;
 
             if(distance <= 2f)
             {
-                GameObject w = Instantiate(weapon, pos + dir * 1.25f, Quaternion.identity);
+                moveSpeed = 0;
             }
         }
         else if (distance > 5f)
@@ -76,11 +77,13 @@ public class Nearattack : MonoBehaviour
 
     bool isactiveCoroutine = false;
     // コルーチン本体
-    private IEnumerator DelayCoroutine()
+    public IEnumerator DelayCoroutine()
     {
         Debug.Log("呼び出し");
 
         isactiveCoroutine = true;
+
+        GameObject w = Instantiate(weapon, this.transform.position + ((targetPoint.position - this.transform.position).normalized) * 1.25f, Quaternion.identity);
 
         yield return new WaitForSeconds(1f);
 
@@ -99,10 +102,5 @@ public class Nearattack : MonoBehaviour
         direction = (targetPoint.position - this.transform.position).normalized;
 
         this.myRigidbody2D.velocity = direction * this.moveSpeed;
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        this.moveSpeed = 0;
     }
 }
