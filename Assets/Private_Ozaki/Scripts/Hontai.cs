@@ -27,7 +27,7 @@ public class Hontai : MonoBehaviour
         {
             if (Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
             {
-                // transform.DOMove(player.transform.position, 1f).SetEase(Ease.Linear).SetLoops(1, LoopType.Yoyo);
+                //transform.DOMove(player.transform.position, 1f).SetEase(Ease.Linear).SetLoops(1, LoopType.Yoyo);
                 myRigidbody2D.AddForce((player.transform.position - this.transform.position).normalized * power);
                 Debug.Log("aa");
             }
