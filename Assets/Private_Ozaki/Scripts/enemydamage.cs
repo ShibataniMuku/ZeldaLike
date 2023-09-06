@@ -2,27 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemydamage: MonoBehaviour
+
+public class Enemydamage: MonoBehaviour, IDamegeable
 {
+    public interface IDamegeable
+{
+    public void Damage(int value);
 
-    //[SerializeField]を書くことによりpublicでなくてもInspectorから値を編集できます
+    public void Death();
+}
+
     [SerializeField]
-    private float hp = 5;  //体力
+    private int HP = 30;
 
-    //貫通する場合はTrigger系(どちらかにColliderのis triggerをチェック) 衝突しあうものはCollision系(ColliderとRigidbodyが必要)
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        //体力が0以下になった時{}内の処理が行われる
-        if (hp <= 0)
-        {
-            Destroy(gameObject);  //ゲームオブジェクトが破壊される
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
+   //private void OnCollisionEnter2D(Collision2D other)
+    public void Damage(int value)
     {
         Debug.Log("ダメージ");
 
+        HP -= value;
     }
+    void Update()
+    {
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+    public void Death()
+    {
+
+    }
+}
+public interface IDamegeable
+{
+    public void Damage(int value);
+
+    public void Death();
 }
