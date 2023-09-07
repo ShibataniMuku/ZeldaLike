@@ -7,14 +7,21 @@ public class Playerattack : MonoBehaviour
     [SerializeField]
     int damage = 10;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        IDamegeable damegeable = collision.gameObject.GetComponent<IDamegeable>();
+        Debug.Log("Playerattack - OnCollisionEnter | ‚Æ‚¤‚½‚Â");
+        Enemydamage enemydamage = collision.gameObject.GetComponent<Enemydamage>();
 
-        if (damegeable != null)
+        if (enemydamage != null)
         {
-            damegeable.Damage(damage);
+            enemydamage.Damage(damage);
         }
+        //IDamegeable damegeable = collision.gameObject.GetComponent<IDamegeable>();
+
+        /* if (damegeable != null)
+         {
+             damegeable.Damage(damage);
+         }*/
     }
     // Start is called before the first frame update
     void Start()
@@ -25,6 +32,6 @@ public class Playerattack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

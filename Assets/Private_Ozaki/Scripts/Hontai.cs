@@ -27,8 +27,10 @@ public class Hontai : MonoBehaviour
         {
             if (Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
             {
+                yield return new WaitForSeconds(0.5f);
+
                 //transform.DOMove(player.transform.position, 1f).SetEase(Ease.Linear).SetLoops(1, LoopType.Yoyo);
-                myRigidbody2D.AddForce((player.transform.position - this.transform.position).normalized * power);
+                myRigidbody2D.AddForce((player.transform.position - this.transform.position).normalized * power, ForceMode2D.Impulse);
                 Debug.Log("aa");
             }
 
@@ -39,7 +41,9 @@ public class Hontai : MonoBehaviour
                 enabled = false;
             }
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
+
+            myRigidbody2D.velocity = Vector2.zero;
         }
 
     }
