@@ -9,14 +9,14 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody2D myRigidbody2D = null;
 
-    [SerializeField] private float moveSpeed = 3.0f; 
+    [SerializeField] private float moveSpeed = 3.0f;
 
     [SerializeField] private Transform targetPoint = null;
 
     private int index = 0;
     [SerializeField] private Transform[] route = new Transform[1];
 
-     public GameObject player;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +35,11 @@ public class Enemy : MonoBehaviour
         {
             targetPoint = player.transform;
         }
-        else if(distance > 5f)
+        else if (distance > 5f)
         {
             targetPoint = this.route[index];
         }
-         
+
         if (Vector2.Distance(this.transform.position, targetPoint.position) <= 0.25f)
         {
             this.index++;
@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
             targetPoint = this.route[index];
         }
 
-        if(this.moveSpeed <= 0 && isactiveCoroutine == false)
+        if (this.moveSpeed <= 0 && isactiveCoroutine == false)
         {
             // コルーチンの起動
             StartCoroutine(DelayCoroutine());

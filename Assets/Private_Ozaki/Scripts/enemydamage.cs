@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Enemydamage: MonoBehaviour, IDamegeable
+public class Enemydamage: MonoBehaviour//, IDamegeable
 {
-    public interface IDamegeable
+   /* public interface IDamegeable
 {
     public void Damage(int value);
 
     public void Death();
-}
+}*/
 
     [SerializeField]
     private int HP = 30;
@@ -34,9 +34,9 @@ public class Enemydamage: MonoBehaviour, IDamegeable
 
     }
 }
-public interface IDamegeable
+/*public interface IDamegeable
 {
     public void Damage(int value);
 
     public void Death();
-}
+}*/

@@ -18,21 +18,23 @@ public class Enemyattack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //一秒経つごとに弾を発射する
-        currentTime += Time.deltaTime;
-        if (targetTime < currentTime)
-        {
-            currentTime = 0;
-            //敵の座標を変数posに保存
-            var pos = this.gameObject.transform.position;
-            //敵からプレイヤーに向かうベクトルをつくる
-            //プレイヤーの位置から敵の位置（弾の位置）を引く
-            Vector3 vec = player.transform.position - pos;
-            //弾のプレハブを作成
-            GameObject t = Instantiate(tama, pos + vec.normalized * 1.5f, Quaternion.identity);
-            //弾のRigidBody2Dコンポネントのvelocityに先程求めたベクトルを入れて力を加える
-            t.GetComponent<Rigidbody2D>().velocity = vec;
-            Debug.Log(vec);
+        if (Vector2.Distance(this.transform.position, player.transform.position) <= 8f)
+        { //一秒経つごとに弾を発射する
+            currentTime += Time.deltaTime;
+            if (targetTime < currentTime)
+            {
+                currentTime = 0;
+                //敵の座標を変数posに保存
+                var pos = this.gameObject.transform.position;
+                //敵からプレイヤーに向かうベクトルをつくる
+                //プレイヤーの位置から敵の位置（弾の位置）を引く
+                Vector3 vec = player.transform.position - pos;
+                //弾のプレハブを作成
+                GameObject t = Instantiate(tama, pos + vec.normalized * 1.5f, Quaternion.identity);
+                //弾のRigidBody2Dコンポネントのvelocityに先程求めたベクトルを入れて力を加える
+                t.GetComponent<Rigidbody2D>().velocity = vec;
+                //Debug.Log(vec);
+            }
         }
     }
 }
