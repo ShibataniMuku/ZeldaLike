@@ -25,35 +25,7 @@ public class Move2Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            inputAxis.y = 1;
-            direction = 0;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            inputAxis.y = -1;
-            direction = 2;
-        }
-        else
-        {
-            inputAxis.y = 0;
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            inputAxis.x = 1;
-            direction = 1;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            inputAxis.x = -1;
-            direction = 3;
-        }
-        else
-        {
-            inputAxis.x = 0;
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -80,6 +52,12 @@ public class Move2Controller : MonoBehaviour
                 vec2 = new Vector2(-1, 0);
             }
             g.GetComponent<Rigidbody2D>().velocity = vec2 * 3;
+
+            //if (Input.GetKey(KeyCode.RightShift))
+            //{
+                //‚±‚±‚É‘¬‚³‚ð“ñ”{‚É‚·‚é‚Ì‚ð“ü‚ê‚½‚¢
+              
+           // }
         }
     }
 }
