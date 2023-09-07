@@ -5,8 +5,11 @@ using UnityEngine;
 public class MoveController : MonoBehaviour
 {
     public GameObject PunchPrefab;
+    public GameObject punch2Prefab;
     [SerializeField]
     float SPEED = 1.0f;
+    [SerializeField] private bool dash = false;
+    private bool stop = false;
     private Rigidbody2D rigidBody;
     private Vector2 inputAxis;
 
@@ -24,6 +27,16 @@ public class MoveController : MonoBehaviour
 
     void Update()
     {
+        /*if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            dash = true;
+
+        }
+        if (Input.GetKeyUp(KeyCode.RightShift))
+        {
+            dash = false;
+        }*/
+        dash = Input.GetKey(KeyCode.RightShift);
 
         // x,ｙの入力値を得る
         // それぞれ+や-の値と入力の関連付けはInput Managerで設定されている
@@ -90,12 +103,71 @@ public class MoveController : MonoBehaviour
                 vec2 = new Vector2(-1, 0);
             }
             g.GetComponent<Rigidbody2D>().velocity = vec2 * 3;
+
+            stop = true;
         }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            stop = false;
+        }
+        //stop = Input.GetKey(KeyCode.RightArrow);
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            GameObject g = Instantiate(punch2Prefab, transform.position, Quaternion.identity);
+
+            Vector2 vec2 = Vector2.zero;
+
+            //ここに、方向（direction）によって、vec2に値を代入する処理を書く。
+
+            if (direction == 0)
+            {
+                vec2 = new Vector2(0, 1);
+            }
+            else if (direction == 1)
+            {
+                vec2 = new Vector2(1, 0);
+            }
+            else if (direction == 2)
+            {
+                vec2 = new Vector2(0, -1);
+            }
+            else if (direction == 3)
+            {
+                vec2 = new Vector2(-1, 0);
+            }
+            g.GetComponent<Rigidbody2D>().velocity = vec2 * 3;
+
+            stop = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            stop = false;
+        }
+        //if (Input.GetKey(KeyCode.RightShift))
+        //{
+        //ここに速さを二倍にするのを入れたい
+
+        // }
+
     }
 
     private void FixedUpdate()
     {
         // 速度を代入する
-        rigidBody.velocity = inputAxis.normalized * SPEED;
+        
+        if (dash == false)
+        {
+            rigidBody.velocity = inputAxis.normalized * SPEED;
+        }
+        else
+        {
+            rigidBody.velocity = inputAxis.normalized * SPEED * 2;
+        }
+        if (stop == true)
+        {
+            rigidBody.velocity = inputAxis.normalized * SPEED * 0;
+        }
+        
     }
 }

@@ -265,7 +265,6 @@ GameObject:
   - component: {fileID: 404721860}
   - component: {fileID: 404721859}
   - component: {fileID: 404721858}
-  - component: {fileID: 404721862}
   m_Layer: 0
   m_Name: Square
   m_TagString: Player
@@ -286,7 +285,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PunchPrefab: {fileID: 6040258267337121467, guid: 1af60e4c9c5a4aa4b8501d21419e57a3, type: 3}
-  SPEED: 1
+  punch2Prefab: {fileID: 4236549979788398462, guid: fdcda95d629de0d42989c9c7676c67e6, type: 3}
+  SPEED: 3
+  dash: 0
   direction: 0
 --- !u!50 &404721859
 Rigidbody2D:
@@ -382,21 +383,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &404721862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404721857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 111f6be6dccfcad49a91f92872563571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  punch2Prefab: {fileID: 4236549979788398462, guid: fdcda95d629de0d42989c9c7676c67e6, type: 3}
-  SPEED: 1
-  direction: 0
 --- !u!1 &1740738467
 GameObject:
   m_ObjectHideFlags: 0
