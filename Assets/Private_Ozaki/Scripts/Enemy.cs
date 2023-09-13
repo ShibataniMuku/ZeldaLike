@@ -34,6 +34,11 @@ public class Enemy : MonoBehaviour
         if (distance <= 5f)
         {
             targetPoint = player.transform;
+
+            if(distance <= 3f)
+            {
+                moveSpeed = 0;
+            }
         }
         else if (distance > 5f)
         {
@@ -88,6 +93,6 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        this.moveSpeed = 0;
+        
     }
 }
