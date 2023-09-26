@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections;
@@ -5,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class Enemy : MonoBehaviour
+public class Rush : MonoBehaviour
 {
     private Rigidbody2D myRigidbody2D = null;
 
@@ -24,18 +25,18 @@ public class Enemy : MonoBehaviour
         this.myRigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
 
         this.targetPoint = route[0];
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("bb");
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
         if (distance <= 5f)
         {
             targetPoint = player.transform;
 
-            if(distance <= 3f)
+            if (distance <= 3f)
             {
                 moveSpeed = 0;
             }
@@ -74,9 +75,11 @@ public class Enemy : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        moveSpeed = 3.0f;
+        moveSpeed = 3;
 
-        yield return new WaitForSeconds(1.1f);
+        GetComponent<Hontai>().enabled = true;
+
+        enabled = false;
 
         isactiveCoroutine = false;
     }
@@ -93,6 +96,6 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        
+        this.moveSpeed = 0;
     }
 }

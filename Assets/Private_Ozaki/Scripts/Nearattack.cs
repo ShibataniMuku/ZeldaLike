@@ -2,10 +2,12 @@ using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 using static UnityEngine.GraphicsBuffer;
 
-public class Enemy : MonoBehaviour
+public class Nearattack : MonoBehaviour
 {
     private Rigidbody2D myRigidbody2D = null;
 
@@ -17,6 +19,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform[] route = new Transform[1];
 
     public GameObject player;
+
+    public GameObject weapon;
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +35,18 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
+
+        Vector2 dir = Vector2.zero;
+
+        dir = (targetPoint.position - this.transform.position).normalized;
+
+        Vector2 pos = this.transform.position;
+
         if (distance <= 5f)
         {
-            targetPoint = player.transform;
+           targetPoint = player.transform;
 
-            if(distance <= 3f)
+            if(distance <= 2f)
             {
                 moveSpeed = 0;
             }
@@ -66,11 +77,13 @@ public class Enemy : MonoBehaviour
 
     bool isactiveCoroutine = false;
     // コルーチン本体
-    private IEnumerator DelayCoroutine()
+    public IEnumerator DelayCoroutine()
     {
         Debug.Log("呼び出し");
 
         isactiveCoroutine = true;
+
+        GameObject w = Instantiate(weapon, this.transform.position + ((targetPoint.position - this.transform.position).normalized) * 1.25f, Quaternion.identity);
 
         yield return new WaitForSeconds(1f);
 
@@ -89,10 +102,5 @@ public class Enemy : MonoBehaviour
         direction = (targetPoint.position - this.transform.position).normalized;
 
         this.myRigidbody2D.velocity = direction * this.moveSpeed;
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        
     }
 }
