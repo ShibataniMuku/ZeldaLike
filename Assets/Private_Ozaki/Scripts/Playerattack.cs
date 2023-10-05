@@ -10,11 +10,11 @@ public class Playerattack : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Playerattack - OnCollisionEnter | ‚Æ‚¤‚½‚Â");
-        Enemydamage enemydamage = collision.gameObject.GetComponent<Enemydamage>();
+        Enemystatus enemydamage = collision.gameObject.GetComponent<Enemystatus>();
 
         if (enemydamage != null)
         {
-            enemydamage.Damage(damage);
+            enemydamage.DecreaseHP(damage);
         }
         //IDamegeable damegeable = collision.gameObject.GetComponent<IDamegeable>();
 

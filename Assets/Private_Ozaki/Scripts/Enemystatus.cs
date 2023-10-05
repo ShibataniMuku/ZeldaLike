@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Enemydamage: MonoBehaviour//, IDamegeable
+public class Enemystatus : MonoBehaviour//, IDamegeable
 {
-   /* public interface IDamegeable
-{
-    public void Damage(int value);
+    /* public interface IDamegeable
+ {
+     public void Damage(int value);
 
-    public void Death();
-}*/
+     public void Death();
+ }*/
 
     [SerializeField]
     private int HP = 30;
 
-   //private void OnCollisionEnter2D(Collision2D other)
+    //private void OnCollisionEnter2D(Collision2D other)
     public void DecreaseHP(int damage)
     {
         Debug.Log("É_ÉÅÅ[ÉW");
