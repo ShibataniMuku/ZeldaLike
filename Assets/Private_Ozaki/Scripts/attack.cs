@@ -34,8 +34,18 @@ public class attack : MonoBehaviour
         
     }
 
+    [SerializeField]
+    int damage = 10;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+       /*PlayerStatus playerdamage = collision.gameObject.GetComponent<Playerstatus>();
+
+        if (playerdamage != null)
+        {
+            playerdamage.DecreaseHP(damage);
+        }*/
+
         Destroy(this.gameObject);
     }
 }
