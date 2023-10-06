@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 810494254}
   - component: {fileID: 810494252}
   - component: {fileID: 810494257}
+  - component: {fileID: 810494258}
   m_Layer: 0
   m_Name: enemy(2)
   m_TagString: Enemy
@@ -348,6 +349,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2057739842}
   power: 5
+--- !u!114 &810494258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810494251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d626243f81b7864bbcdf566d3b73c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 30
 --- !u!1 &842907169
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,13 +530,14 @@ GameObject:
   - component: {fileID: 1248756216}
   - component: {fileID: 1248756215}
   - component: {fileID: 1248756214}
+  - component: {fileID: 1248756219}
   m_Layer: 0
   m_Name: enemy(3)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1248756214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,6 +698,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1248756219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248756213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d626243f81b7864bbcdf566d3b73c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 30
 --- !u!1 &1276997089
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,13 +726,14 @@ GameObject:
   - component: {fileID: 1276997094}
   - component: {fileID: 1276997095}
   - component: {fileID: 1276997096}
+  - component: {fileID: 1276997097}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1276997090
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -885,9 +914,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276997089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b709644143a29a4083e742a34cd4d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 30
+--- !u!114 &1276997097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276997089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d626243f81b7864bbcdf566d3b73c33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 30
@@ -2250,6 +2292,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 2147483649
+  - first: {x: 14, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -10, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -4654,11 +4706,15 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 312
     m_Data: {fileID: 11400000, guid: 4a2f98c4f954bb2428fd8d56dab555e2, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 2be8b2eaa9ab05c41aa127db8c91497a, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 312
     m_Data: {fileID: 21300064, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300242, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 312
+  - m_RefCount: 313
     m_Data:
       e00: 1
       e01: 0
@@ -4677,13 +4733,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 312
+  - m_RefCount: 313
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -10, y: -5, z: 0}
-  m_Size: {x: 24, y: 13, z: 1}
+  m_Size: {x: 25, y: 13, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
