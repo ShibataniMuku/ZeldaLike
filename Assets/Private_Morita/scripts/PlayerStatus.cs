@@ -6,7 +6,10 @@ public class PlayerStatus : MonoBehaviour
 {
 
    [SerializeField] private int HP = 100;
-    
+    public int GetHP()
+    {
+        return this.HP;
+    }
     // Start is called before the first frame update
     void Start()
     {
