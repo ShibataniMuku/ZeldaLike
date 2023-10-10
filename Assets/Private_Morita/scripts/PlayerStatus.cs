@@ -11,7 +11,7 @@ public class PlayerStatus : MonoBehaviour
         return this.HP;
     }
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         Debug.Log(string.Format("HP => {0}", HP));
         decreaseHP(10);
@@ -19,7 +19,7 @@ public class PlayerStatus : MonoBehaviour
         Debug.Log(string.Format("HP => {0}", HP));
         decreaseHP(-10);
         Debug.Log(string.Format("HP => {0}", HP));
-    }
+    }*/
     public void decreaseHP(int amount)
     {
         Debug.Log("decreaseHP‚ª‚æ‚Î‚ê‚½");
@@ -30,6 +30,13 @@ public class PlayerStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+    public void Death()
+    {
+
     }
 }
