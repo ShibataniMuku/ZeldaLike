@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 3.0f;
 
-    [SerializeField] private Transform targetPoint = null;
+    [SerializeField] public Transform targetPoint = null;
 
     private int index = 0;
     [SerializeField] private Transform[] route = new Transform[1];
