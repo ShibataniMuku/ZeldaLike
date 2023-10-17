@@ -18,15 +18,15 @@ public class Bulletattack : MonoBehaviour
     [SerializeField]
     int damage = 10;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Enemystatus component = collision.gameObject.GetComponent<Enemystatus>();
+        Enemystatus component = other.gameObject.GetComponent<Enemystatus>();
 
          if (component != null)
          {
             component.DecreaseHP(damage);
          }
-
+        Debug.Log(other.gameObject.name);
         Destroy(this.gameObject);
     }
 }
