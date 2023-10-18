@@ -17,12 +17,39 @@ using UnityEngine;
     // Update is called once per frame
     void Update()
     {
-        /*GetComponent<targetpoint>
+        //‚±‚±‚Étargetpoint‚ð‚¢‚ê‚½‚¢
 
-        float angle = GetAngle(this.transform.position,targetpoint.position);*/
+        /*float angle = GetAngle(this.transform.position,targetpoint.position);
 
+        if (angle >= -135 && angle < -45)
+        {
+            Wanim.SetInteger("Wanim int", 1);
+        }
 
+        if (angle >= 45 && angle < 135)
+        {
+            Wanim.SetInteger("Walk int", 2);
+        }
 
-        Wanim.SetInteger("Walk int", 1);
+        if (angle >= 135 && angle < -135)
+        {
+            Wanim.SetInteger("Walk int", 3);
+        }
+
+        if (angle >= -45 && angle < 45)
+        {
+            Wanim.SetInteger("Walk int", 4);
+        }*/
+    }
+
+    float GetAngle(Vector2 position, Vector2 targetPoint)
+    {
+        Vector2 dt = targetPoint - position;
+
+        float rad = Mathf.Atan2(dt.y, dt.x);
+
+        float degree = rad * Mathf.Rad2Deg;
+
+        return degree;
     }
 }
