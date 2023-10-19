@@ -11,14 +11,14 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 3.0f;
 
-    [SerializeField] public Transform targetPoint = null;
+    public Transform targetPoint = null;
 
     private int index = 0;
     [SerializeField] private Transform[] route = new Transform[1];
 
     public GameObject player;
 
-    private Animator Wanim = null;
+    private Animator Anim = null;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
 
         this.targetPoint = route[0];
 
-        Wanim = GetComponent<Animator>();
+        Anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -70,22 +70,42 @@ public class Enemy : MonoBehaviour
 
         if(angle >= -135 &&  angle < -45)
         {
-            Wanim.SetInteger("Wanim int", 1);
+            Anim.SetInteger("Walk int", 1);
+
+            if(Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
+            {
+                Anim.SetInteger("Attack Int", 1);
+            }
         }
 
         if(angle >= 45 &&  angle < 135)
         {
-            Wanim.SetInteger("Walk int", 2);
+            Anim.SetInteger("Walk int", 2);
+
+            if (Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
+            {
+                Anim.SetInteger("Attack Int", 2);
+            }
         }
 
-        if(angle >= 135 && angle < -135)
+        if(angle >= 135 || angle < -135)
         {
-            Wanim.SetInteger("Walk int", 3);
+            Anim.SetInteger("Walk int", 3);
+
+            if (Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
+            {
+                Anim.SetInteger("Attack Int", 3);
+            }
         }
 
         if (angle >= -45 && angle < 45)
         {
-            Wanim.SetInteger("Walk int", 4);
+            Anim.SetInteger("Walk int", 4);
+
+            if (Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
+            {
+                Anim.SetInteger("Attack Int", 4);
+            }
         }
     }
 
