@@ -11,8 +11,20 @@ public class Hontai : MonoBehaviour
 
     public float power = 1f;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    int damage = 10;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        /*PlayerStatus playerdamage = collision.gameObject.GetComponent<Playerstatus>();
+
+         if (playerdamage != null)
+         {
+             playerdamage.DecreaseHP(damage);
+         }*/
+    }
+        // Start is called before the first frame update
+        void Start()
     {
         this.myRigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
 

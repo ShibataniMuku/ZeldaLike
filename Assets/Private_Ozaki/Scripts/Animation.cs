@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 
-    public class Walkanimation : MonoBehaviour
+    public class Animation : MonoBehaviour
 {
     private Animator Wanim = null;
 
