@@ -7,7 +7,6 @@ using UnityEngine;
 {
     private Animator Wanim = null;
 
-    private 
     // Start is called before the first frame update
     void Start()
     {
