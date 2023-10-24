@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    int damage = 10;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        /*PlayerStatus playerdamage = collision.gameObject.GetComponent<Playerstatus>();
+
+         if (playerdamage != null)
+         {
+             playerdamage.DecreaseHP(damage);
+         }*/
+    }
+        // Start is called before the first frame update
+        void Start()
     {
         StartCoroutine(DelayCoroutine());
     }
