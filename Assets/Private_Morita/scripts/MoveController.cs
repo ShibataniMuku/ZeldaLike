@@ -12,21 +12,37 @@ public class MoveController : MonoBehaviour
     private bool stop = false;
     private Rigidbody2D rigidBody;
     private Vector2 inputAxis;
-
+    private Animator anim = null;
     //direction = 0 -> 上
     //direction = 1 -> 右
     //direction = 2 -> 下
     //direction = 3 -> 左
     public int direction = 0;
-
+    //[SerializeField] private Sprite[] standSprite = new Sprite[4];
+    //private SpriteRenderer mySpriteRenderer = null;
     void Start()
     {
         // オブジェクトに設定しているRigidbody2Dの参照を取得する
         this.rigidBody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+       // mySpriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+
     }
 
     void Update()
     {
+        Vector3 input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        if (input == Vector3.zero)
+        {
+            anim.speed = 0;
+        }
+        else
+        {
+            anim.speed = 1;
+            anim.SetFloat("x", Input.GetAxis("Horizontal"));
+            anim.SetFloat("y", Input.GetAxis("Vertical"));
+        }
+
         /*if (Input.GetKeyDown(KeyCode.RightShift))
         {
             dash = true;
@@ -48,30 +64,45 @@ public class MoveController : MonoBehaviour
         {
             inputAxis.y = 1;
             direction = 0;
+            anim.SetBool("Uwalk", true);
+            anim.SetBool("Dwalk", false);
         }
         else if (Input.GetKey(KeyCode.S))
         {
             inputAxis.y = -1;
             direction = 2;
+            anim.SetBool("Dwalk", true);
+            anim.SetBool("Uwalk", false);
+           
         }
         else
         {
             inputAxis.y = 0;
+            anim.SetBool("Dwalk", false);
+            anim.SetBool("Uwalk", false);
+            
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             inputAxis.x = 1;
             direction = 1;
+            anim.SetBool("Rwalk", true);
+            anim.SetBool("Lwalk", false);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             inputAxis.x = -1;
             direction = 3;
+            anim.SetBool("Rwalk", false);
+            anim.SetBool("Lwalk", true);
+
         }
         else
         {
             inputAxis.x = 0;
+            anim.SetBool("Rwalk", false);
+            anim.SetBool("Lwalk", false);
         }
       //  Debug.Log("inoutAxis => " + this.inputAxis);
        // inputAxis.x = Input.
@@ -144,12 +175,8 @@ public class MoveController : MonoBehaviour
         {
             stop = false;
         }
-        //if (Input.GetKey(KeyCode.RightShift))
-        //{
-        //ここに速さを二倍にするのを入れたい
-
-        // }
-
+        //mySpriteRenderer.sprite.texture = standSprite[direction];
+        //Debug.Log(direction);
     }
 
     private void FixedUpdate()

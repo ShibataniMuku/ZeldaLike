@@ -27,6 +27,13 @@ public class Bulletattack : MonoBehaviour
             component.DecreaseHP(damage);
          }
         Debug.Log(other.gameObject.name);
-        Destroy(this.gameObject);
+       
+      if(other.gameObject.tag != "Player" && other.gameObject.tag != "Bullet")
+            Destroy(this.gameObject);
     }
+    
+    
+      
+   
+    
 }
