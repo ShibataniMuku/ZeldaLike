@@ -39,12 +39,12 @@ public class attack : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-      /* PlayerStatus playerdamage = collision.gameObject.GetComponent<Playerstatus>();
+      PlayerStatus playerdamage = collision.gameObject.GetComponent<PlayerStatus>();
 
         if (playerdamage != null)
         {
-            playerdamage.DecreaseHP(damage);
-        }*/
+            playerdamage.decreaseHP(damage);
+        }
 
         Destroy(this.gameObject);
     }

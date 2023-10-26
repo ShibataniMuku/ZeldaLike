@@ -143,6 +143,8 @@ public class Nearattack : MonoBehaviour
 
         GameObject w = Instantiate(weapon, this.transform.position + ((targetPoint.position - this.transform.position).normalized) * 1.25f, Quaternion.identity);
 
+        w.GetComponent<Weapon>().Wuser = this.gameObject;
+
         yield return new WaitForSeconds(1f);
 
         moveSpeed = 3.0f;

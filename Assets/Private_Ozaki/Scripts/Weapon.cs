@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] int damage = 10;
 
-    [SerializeField] public GameObject Wuser;
+    public GameObject Wuser = null;
 
     private Animator Ani = null;
 
@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*float angle = GetAngle(this.transform.position, Wuser.transform.position);
+        float angle = GetAngle(this.transform.position, Wuser.transform.position);
 
         if (angle >= -135 && angle < -45)
         {
@@ -58,7 +58,7 @@ public class Weapon : MonoBehaviour
             Ani.SetInteger("Near Attack Int", 1);
 
             this.GetComponent<SpriteRenderer>().flipX = true;
-        }*/
+        }
     }
 
     float GetAngle(Vector2 position, Vector2 targetPoint)
