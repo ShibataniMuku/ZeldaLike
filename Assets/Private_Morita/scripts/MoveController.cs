@@ -177,6 +177,7 @@ public class MoveController : MonoBehaviour
         }
         //mySpriteRenderer.sprite.texture = standSprite[direction];
         //Debug.Log(direction);
+       
     }
 
     private void FixedUpdate()
