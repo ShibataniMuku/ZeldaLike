@@ -19,18 +19,22 @@ public class Rush : MonoBehaviour
 
     public GameObject player;
 
+    private Animator Anim = null;
+
     // Start is called before the first frame update
     void Start()
     {
         this.myRigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
 
         this.targetPoint = route[0];
+
+        Anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("bb");
+        //Debug.Log("bb");
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
         if (distance <= 5f)
         {
@@ -63,6 +67,39 @@ public class Rush : MonoBehaviour
             // コルーチンの起動
             StartCoroutine(DelayCoroutine());
         }
+
+        float angle = GetAngle(this.transform.position, targetPoint.position);
+
+        if (angle >= -135 && angle < -45)
+        {
+            Anim.SetInteger("Walk Int", 1);
+        }
+
+        if (angle >= 45 && angle < 135)
+        {
+            Anim.SetInteger("Walk Int", 2);
+        }
+
+        if (angle >= 135 || angle < -135)
+        {
+            Anim.SetInteger("Walk Int", 3);
+        }
+
+        if (angle >= -45 && angle < 45)
+        {
+            Anim.SetInteger("Walk Int", 4);
+        }
+    }
+
+    float GetAngle(Vector2 position, Vector2 targetPoint)
+    {
+        Vector2 dt = targetPoint - position;
+
+        float rad = Mathf.Atan2(dt.y, dt.x);
+
+        float degree = rad * Mathf.Rad2Deg;
+
+        return degree;
     }
 
     bool isactiveCoroutine = false;
