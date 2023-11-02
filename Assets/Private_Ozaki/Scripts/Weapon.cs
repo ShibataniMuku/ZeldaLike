@@ -55,7 +55,7 @@ public class Weapon : MonoBehaviour
 
         if (angle >= -45 && angle < 45)
         {
-            this.GetComponent<SpriteRenderer>().flipX = true;
+            this.GetComponent<SpriteRenderer>().flipX = false;
 
             Ani.SetInteger("Near Attack Int", 1);
         }

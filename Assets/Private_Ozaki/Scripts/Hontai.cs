@@ -39,27 +39,27 @@ public class Hontai : MonoBehaviour
 
     private void Update()
     {
-        float angle = GetAngle(this.transform.position, player.transform.position);
+        /*float angle = GetAngle(this.transform.position, player.transform.position);
 
         if (angle >= -135 && angle < -45)
         {
-            Anim.SetInteger("Rush int", 0);
+            Anim.SetInteger("Rush Int", 0);
         }
 
         if (angle >= 45 && angle < 135)
         {
-            Anim.SetInteger("Rush int", 1);
+            Anim.SetInteger("Rush Int", 1);
         }
 
         if (angle >= 135 || angle < -135)
         {
-            Anim.SetInteger("Rush int", 2);
+            Anim.SetInteger("Rush Int", 2);
         }
 
         if (angle >= -45 && angle < 45)
         {
-            Anim.SetInteger("Rush int", 3);
-        }
+            Anim.SetInteger("Rush Int", 3);
+        }*/
     }
     float GetAngle(Vector2 position, Vector2 targetPoint)
     {
@@ -77,29 +77,29 @@ public class Hontai : MonoBehaviour
         {
             if (Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
             {
-                //float angle = GetAngle(this.transform.position, player.transform.position);
+                float angle = GetAngle(this.transform.position, player.transform.position);
 
                 yield return new WaitForSeconds(0.5f);
 
-               /* if (angle >= -135 && angle < -45)
+                if (angle >= -135 && angle < -45)
                 {
-                    Anim.SetInteger("Rush int", 1);
+                    Anim.SetInteger("Rush Int", 0);
                 }
 
                 if (angle >= 45 && angle < 135)
                 {
-                    Anim.SetInteger("Rush int", 2);
+                    Anim.SetInteger("Rush Int", 1);
                 }
 
                 if (angle >= 135 || angle < -135)
                 {
-                    Anim.SetInteger("Rush int", 3);
+                    Anim.SetInteger("Rush Int", 2);
                 }
 
                 if (angle >= -45 && angle < 45)
                 {
-                    Anim.SetInteger("Rush int", 4);
-                }*/
+                    Anim.SetInteger("Rush Int", 3);
+                }
 
                 //transform.DOMove(player.transform.position, 1f).SetEase(Ease.Linear).SetLoops(1, LoopType.Yoyo);
                 myRigidbody2D.AddForce((player.transform.position - this.transform.position).normalized * power, ForceMode2D.Impulse);

@@ -74,7 +74,7 @@ public class Nearattack : MonoBehaviour
         if (this.moveSpeed <= 0 && isactiveCoroutine == false)
         {
             // コルーチンの起動
-            StartCoroutine(DelayCoroutine());
+            StartCoroutine(DelayCoroutine(GetAngle(this.transform.position, targetPoint.position)));
         }
 
         float angle = GetAngle(this.transform.position, targetPoint.position);
@@ -135,13 +135,13 @@ public class Nearattack : MonoBehaviour
 
     bool isactiveCoroutine = false;
     // コルーチン本体
-    public IEnumerator DelayCoroutine()
+    public IEnumerator DelayCoroutine(float rotation)
     {
         Debug.Log("呼び出し");
 
         isactiveCoroutine = true;
 
-        GameObject w = Instantiate(weapon, this.transform.position + ((targetPoint.position - this.transform.position).normalized) * 1.25f, Quaternion.identity);
+        GameObject w = Instantiate(weapon, this.transform.position + ((targetPoint.position - this.transform.position).normalized) * 1.25f, Quaternion.Euler(new Vector3(0,0,-rotation)));
 
         w.GetComponent<Weapon>().Wuser = this.gameObject;
 

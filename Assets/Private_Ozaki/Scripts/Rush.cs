@@ -72,22 +72,22 @@ public class Rush : MonoBehaviour
 
         if (angle >= -135 && angle < -45)
         {
-            Anim.SetInteger("Walk Int", 1);
+            Anim.SetInteger("Walk Int", 0);
         }
 
         if (angle >= 45 && angle < 135)
         {
-            Anim.SetInteger("Walk Int", 2);
+            Anim.SetInteger("Walk Int", 1);
         }
 
         if (angle >= 135 || angle < -135)
         {
-            Anim.SetInteger("Walk Int", 3);
+            Anim.SetInteger("Walk Int", 2);
         }
 
         if (angle >= -45 && angle < 45)
         {
-            Anim.SetInteger("Walk Int", 4);
+            Anim.SetInteger("Walk Int", 3);
         }
     }
 
