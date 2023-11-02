@@ -12,12 +12,12 @@ public class Weapon : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*PlayerStatus playerdamage = collision.gameObject.GetComponent<Playerstatus>();
+        PlayerStatus playerdamage = collision.gameObject.GetComponent<PlayerStatus>();
 
          if (playerdamage != null)
          {
-             playerdamage.DecreaseHP(damage);
-         }*/
+             playerdamage.decreaseHP(damage);
+         }
     }
         // Start is called before the first frame update
         void Start()
@@ -34,30 +34,30 @@ public class Weapon : MonoBehaviour
 
         if (angle >= -135 && angle < -45)
         {
-            Ani.SetInteger("Near Attack Int", 0);
-
             this.GetComponent<SpriteRenderer>().flipY = false;
+
+            Ani.SetInteger("Near Attack Int", 0);
         }
 
         if (angle >= 45 && angle < 135)
         {
-            Ani.SetInteger("Near Attack Int", 0);
-
             this.GetComponent<SpriteRenderer>().flipY = true;
+
+            Ani.SetInteger("Near Attack Int", 0);
         }
 
         if (angle >= 135 || angle < -135)
         {
-            Ani.SetInteger("Near Attack Int", 1);
-
             this.GetComponent<SpriteRenderer>().flipX = false;
+
+            Ani.SetInteger("Near Attack Int", 1);
         }
 
         if (angle >= -45 && angle < 45)
         {
-            Ani.SetInteger("Near Attack Int", 1);
-
             this.GetComponent<SpriteRenderer>().flipX = true;
+
+            Ani.SetInteger("Near Attack Int", 1);
         }
     }
 
