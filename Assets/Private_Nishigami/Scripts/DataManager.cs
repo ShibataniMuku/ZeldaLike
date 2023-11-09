@@ -28,8 +28,11 @@ public class DataManager : MonoBehaviour
     // 戻り値：bool型：ステージをクリアしたかどうか
     public bool getDidClearStage(int stageNumber)
     {
-
-        if (stageNumber < 1 || stageNumber > this.didClearStage.Count)
+        if (stageNumber == -999)
+        {
+            return true;
+        }
+        else if (stageNumber < 1 || stageNumber > this.didClearStage.Count)
         {
             Debug.Log(string.Format("【 DataManager：getDidClearStage() 】ステージ {0} は存在しません。", stageNumber));
         }
