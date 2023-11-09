@@ -94,11 +94,15 @@ public class Hontai : MonoBehaviour
                 if (angle >= 135 || angle < -135)
                 {
                     Anim.SetInteger("Rush Int", 2);
+
+                    this.GetComponent<SpriteRenderer>().flipX = true;
                 }
 
                 if (angle >= -45 && angle < 45)
                 {
                     Anim.SetInteger("Rush Int", 3);
+
+                    this.GetComponent<SpriteRenderer>().flipX = false;
                 }
 
                 //transform.DOMove(player.transform.position, 1f).SetEase(Ease.Linear).SetLoops(1, LoopType.Yoyo);
