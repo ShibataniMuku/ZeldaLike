@@ -1086,10 +1086,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1841344037331735225, guid: 23c12923f1fc45e4d8f6b34f407c4775, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: StageSelect
-      objectReference: {fileID: 0}
     - target: {fileID: 9081458712246658477, guid: 23c12923f1fc45e4d8f6b34f407c4775, type: 3}
       propertyPath: m_Name
       value: (Canvas) GoalUIManager

@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage_number: -999
-  scene_name: Stage_1
+  scene_name: Stage
   open_sprite: {fileID: 21300828, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
   close_sprite: {fileID: 21300824, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
 --- !u!1 &888077001

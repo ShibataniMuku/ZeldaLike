@@ -60,6 +60,7 @@ public class AudioVolume : MonoBehaviour
 
     }
 
+
     public void SwitchPivotVisible()
     {
         this.pivot.SetActive(!this.pivot.activeSelf);
