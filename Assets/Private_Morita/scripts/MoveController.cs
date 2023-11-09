@@ -31,6 +31,13 @@ public class MoveController : MonoBehaviour
 
     void Update()
     {
+        /*int inputX = 0;
+        int inputY = 0;
+        if (Input.GetAxis(KeyCode.A)) { inputX = -1; }
+        if (Input.GetAxis(KeyCode.D)) { inputX = 1; }
+        if (Input.Get(KeyCode.W)) { inputY = 1; }
+        if (Input.GetKeyDown(KeyCode.S)) { inputY = -1; }*/
+
         Vector3 input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         if (input == Vector3.zero)
         {
@@ -39,8 +46,8 @@ public class MoveController : MonoBehaviour
         else
         {
             anim.speed = 1;
-            anim.SetFloat("x", Input.GetAxis("Horizontal"));
-            anim.SetFloat("y", Input.GetAxis("Vertical"));
+            anim.SetFloat("x", input.x);
+            anim.SetFloat("y", input.y);
         }
 
         /*if (Input.GetKeyDown(KeyCode.RightShift))
@@ -120,18 +127,22 @@ public class MoveController : MonoBehaviour
             if (direction == 0)
             {
                 vec2 = new Vector2(0, 1);
+                anim.SetBool("Uattack", true);
             }
             else if (direction == 1)
             {
                 vec2 = new Vector2(1, 0);
+                anim.SetBool("Rshot", true);
             }
             else if (direction == 2)
             {
                 vec2 = new Vector2(0, -1);
+                anim.SetBool("Dshot", true);
             }
             else if (direction == 3)
             {
                 vec2 = new Vector2(-1, 0);
+                anim.SetBool("Lshot", true);
             }
             g.GetComponent<Rigidbody2D>().velocity = vec2 * 3;
 
@@ -140,6 +151,10 @@ public class MoveController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
             stop = false;
+            anim.SetBool("Uattack", false);
+            anim.SetBool("Rshot", false);
+            anim.SetBool("Dshot", false);
+            anim.SetBool("Lshot", false);
         }
         //stop = Input.GetKey(KeyCode.RightArrow);
 
@@ -154,18 +169,25 @@ public class MoveController : MonoBehaviour
             if (direction == 0)
             {
                 vec2 = new Vector2(0, 1);
+                anim.SetBool("Uattack", true);
+
             }
             else if (direction == 1)
             {
                 vec2 = new Vector2(1, 0);
+                anim.SetBool("Rattack", true);
             }
             else if (direction == 2)
             {
                 vec2 = new Vector2(0, -1);
+                anim.SetBool("Dattack", true);
+
             }
             else if (direction == 3)
             {
                 vec2 = new Vector2(-1, 0);
+                transform.localScale = new Vector2(-1, 1);
+                anim.SetBool("Lattack", true);
             }
             g.GetComponent<Rigidbody2D>().velocity = vec2 * 3;
 
@@ -174,6 +196,12 @@ public class MoveController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
             stop = false;
+            anim.SetBool("Rattack", false);
+            anim.SetBool("Dattack", false);
+            anim.SetBool("Lattack", false);
+            anim.SetBool("Uattack", false);
+            transform.localScale = new Vector2(1, 1);
+
         }
         //mySpriteRenderer.sprite.texture = standSprite[direction];
         //Debug.Log(direction);
