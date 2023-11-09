@@ -83,11 +83,15 @@ public class Rush : MonoBehaviour
         if (angle >= 135 || angle < -135)
         {
             Anim.SetInteger("Walk Int", 2);
+
+            this.GetComponent<SpriteRenderer>().flipX = true;
         }
 
         if (angle >= -45 && angle < 45)
         {
             Anim.SetInteger("Walk Int", 3);
+
+            this.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
