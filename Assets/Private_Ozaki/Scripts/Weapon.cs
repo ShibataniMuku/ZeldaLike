@@ -6,18 +6,18 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] int damage = 10;
 
-    [SerializeField] public GameObject Wuser;
+    public GameObject Wuser = null;
 
     private Animator Ani = null;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*PlayerStatus playerdamage = collision.gameObject.GetComponent<Playerstatus>();
+        PlayerStatus playerdamage = collision.gameObject.GetComponent<PlayerStatus>();
 
          if (playerdamage != null)
          {
-             playerdamage.DecreaseHP(damage);
-         }*/
+             playerdamage.decreaseHP(damage);
+         }
     }
         // Start is called before the first frame update
         void Start()
@@ -30,35 +30,35 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*float angle = GetAngle(this.transform.position, Wuser.transform.position);
+        float angle = GetAngle(this.transform.position, Wuser.transform.position);
 
         if (angle >= -135 && angle < -45)
         {
-            Ani.SetInteger("Near Attack Int", 0);
-
             this.GetComponent<SpriteRenderer>().flipY = false;
+
+            Ani.SetInteger("Near Attack Int", 0);
         }
 
         if (angle >= 45 && angle < 135)
         {
-            Ani.SetInteger("Near Attack Int", 0);
-
             this.GetComponent<SpriteRenderer>().flipY = true;
+
+            Ani.SetInteger("Near Attack Int", 0);
         }
 
         if (angle >= 135 || angle < -135)
         {
-            Ani.SetInteger("Near Attack Int", 1);
-
             this.GetComponent<SpriteRenderer>().flipX = false;
+
+            Ani.SetInteger("Near Attack Int", 1);
         }
 
         if (angle >= -45 && angle < 45)
         {
-            Ani.SetInteger("Near Attack Int", 1);
+            this.GetComponent<SpriteRenderer>().flipX = false;
 
-            this.GetComponent<SpriteRenderer>().flipX = true;
-        }*/
+            Ani.SetInteger("Near Attack Int", 1);
+        }
     }
 
     float GetAngle(Vector2 position, Vector2 targetPoint)
