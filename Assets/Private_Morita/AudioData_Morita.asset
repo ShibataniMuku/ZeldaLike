@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SE_Data:
   - id: 0
-    clip: {fileID: 0}
-    volume: 0
-    memo: 
+    clip: {fileID: 8300000, guid: 992609e133e13434aa7c3f2d181014b9, type: 3}
+    volume: 0.299
+    memo: "attack\u306ESE"
   BGM_Data: []
