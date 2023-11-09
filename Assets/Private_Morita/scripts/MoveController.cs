@@ -118,7 +118,8 @@ public class MoveController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-           GameObject g = Instantiate(PunchPrefab, transform.position, Quaternion.identity);
+            AudioManager.instance_AudioManager.PlaySE(0, 1);
+            GameObject g = Instantiate(PunchPrefab, transform.position, Quaternion.identity);
 
             Vector2 vec2 = Vector2.zero;
 

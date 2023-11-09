@@ -25,7 +25,8 @@ public class PlayerStatus : MonoBehaviour
         Debug.Log("decreaseHP‚ª‚æ‚Î‚ê‚½");
         //HP = HP - amount;
         HP -= Mathf.Abs(amount);
-        
+        AudioManager.instance_AudioManager.PlaySE(0, 2);
+
     }
     // Update is called once per frame
     void Update()
