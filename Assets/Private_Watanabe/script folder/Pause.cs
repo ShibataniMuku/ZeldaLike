@@ -44,6 +44,6 @@ public class pause : MonoBehaviour
     }
     public void Setting()
     {
-        
+        SceneManager.LoadScene("Setting");
     }
 }
