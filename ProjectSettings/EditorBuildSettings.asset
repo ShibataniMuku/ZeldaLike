@@ -7,9 +7,29 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/UnityChan2D/Demo/Scenes/Start.unity
+    guid: b763c98f277cc420aa68ceb3fc0daf82
   - enabled: 1
     path: Assets/UnityChan2D/Demo/Scenes/Loading 1-1.unity
+    guid: a35423fc824db4fcab5346624a89eadd
   - enabled: 1
     path: Assets/UnityChan2D/Demo/Scenes/Intro 1-1.unity
+    guid: b624da3e00d714908a6ad67aba8ddba4
   - enabled: 1
     path: Assets/UnityChan2D/Demo/Scenes/World 1-1.unity
+    guid: bc1bc11bd56944cb68646a65a5fff077
+  - enabled: 1
+    path: Assets/Private_Watanabe/Title.unity
+    guid: e00995b5b8f26f249bea3ebb14af51df
+  - enabled: 1
+    path: Assets/Private_Watanabe/StageSelect.unity
+    guid: 2a57d58a60879634684725a65e9a8520
+  - enabled: 1
+    path: Assets/Private_Watanabe/Stage.unity
+    guid: e3b95526424889c4993172c9520dc2c5
+  - enabled: 1
+    path: Assets/Private_Watanabe/result.unity
+    guid: 7520b5c14e75ea04facc8fbd05fc0d07
+  - enabled: 1
+    path: Assets/Private_Watanabe/New Scene.unity
+    guid: b4bb88716a08d8f4bab17511ef6ecd88
+  m_configObjects: {}

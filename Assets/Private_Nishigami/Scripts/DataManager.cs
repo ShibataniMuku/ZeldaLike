@@ -19,7 +19,7 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    [SerializeField] private const int stageNumber = 5;
+    [SerializeField] private const int stageNumber = 3;
 
     public List<bool> didClearStage = new List<bool>(new bool[stageNumber]);
 
