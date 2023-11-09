@@ -2026,6 +2026,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1554663034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2680579893363830460, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
+  m_PrefabInstance: {fileID: 8645951058051982368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab420b846f5c72a479ec28ebae0834e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788221482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,7 +2695,11 @@ PrefabInstance:
     - target: {fileID: 1466226352399593789, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 679866513}
+      objectReference: {fileID: 1554663034}
+    - target: {fileID: 1466226352399593789, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: button_StageSelect
+      objectReference: {fileID: 0}
     - target: {fileID: 2983888995762312198, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2776,11 +2791,19 @@ PrefabInstance:
     - target: {fileID: 8105303819393009259, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 679866513}
+      objectReference: {fileID: 1554663034}
+    - target: {fileID: 8105303819393009259, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: button_Resume
+      objectReference: {fileID: 0}
     - target: {fileID: 8318640924011012960, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 679866513}
+      objectReference: {fileID: 1554663034}
+    - target: {fileID: 8318640924011012960, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: button_Setting
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -10,6 +10,7 @@ public class Result : MonoBehaviour
     {
         if (firstPush==false)
         {
+            AudioManager.instance_AudioManager.PlaySE(4, 1);
             SceneManager.LoadScene("StageSelect");
             firstPush = true;
         }
