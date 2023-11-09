@@ -5,17 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class Set : MonoBehaviour
 {
-    private bool firstPush = false;
+    //private bool firstPush = false;
 
     public void PressSetting()
     {
         Debug.Log("Press Setting");
-        if (!firstPush)
+
+        SettingUIManager.instance_SettingUIManager.SwitchPivotVisible();
+
+        /*if (!firstPush)
         {
             Debug.Log("Go Next Scene!");
-            SceneManager.LoadScene("");
+            //SceneManager.LoadScene("");
             firstPush = true;
-        }
+        }*/
     }
     // Start is called before the first frame update
     void Start()

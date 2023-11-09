@@ -31,17 +31,20 @@ public class pause : MonoBehaviour
             }
         }
     }
+
     public void Resume()
     {
         Time.timeScale = 1;
         pausePanel.SetActive(false);
         Cursor.visible = false;
     }
+
     public void StageSelect()
     {
         
         SceneManager.LoadScene("StageSelect");
     }
+
     public void Setting()
     {
         
