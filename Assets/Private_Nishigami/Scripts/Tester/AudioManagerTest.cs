@@ -14,6 +14,11 @@ public class AudioManagerTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AudioVolume.instance_AudioVolume.SwitchPivotVisible();
+        //AudioVolume.instance_AudioVolume.SwitchPivotVisible();
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            AudioManager.instance_AudioManager.PlaySE(1, 0);
+        }
     }
 }

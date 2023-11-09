@@ -184,17 +184,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc4f44facb4dd2419b5bd43491c9515, type: 3}
---- !u!114 &298940319 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2680579893363830460, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-  m_PrefabInstance: {fileID: 1358179608}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab420b846f5c72a479ec28ebae0834e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &472871723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,18 +1289,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1466226352399593789, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 298940319}
-    - target: {fileID: 1466226352399593789, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: button_StageSelect
-      objectReference: {fileID: 0}
-    - target: {fileID: 1466226352399593789, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SettingUIManager, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 2983888995762312198, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1399,30 +1376,6 @@ PrefabInstance:
     - target: {fileID: 3488145960130573414, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
       propertyPath: m_Name
       value: Canvas_SettingUIManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8105303819393009259, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 298940319}
-    - target: {fileID: 8105303819393009259, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: button_Resume
-      objectReference: {fileID: 0}
-    - target: {fileID: 8105303819393009259, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SettingUIManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318640924011012960, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 298940319}
-    - target: {fileID: 8318640924011012960, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: button_Setting
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318640924011012960, guid: 47907ddf99b9c9f4ca6ee21bd5761f8b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SettingUIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
