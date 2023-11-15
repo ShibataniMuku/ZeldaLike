@@ -25,6 +25,36 @@ public class Weapon : MonoBehaviour
         StartCoroutine(DelayCoroutine());
 
         Ani = GetComponent<Animator>();
+
+        float angle = GetAngle(this.transform.position, Wuser.transform.position);
+
+        if (angle >= -135 && angle < -45)
+        {
+            this.GetComponent<SpriteRenderer>().flipY = false;
+
+            Ani.SetInteger("Near Attack Int", 2);
+        }
+
+        if (angle >= 45 && angle < 135)
+        {
+            this.GetComponent<SpriteRenderer>().flipY = true;
+
+            Ani.SetInteger("Near Attack Int", 2);
+        }
+
+        if (angle >= 135 || angle < -135)
+        {
+            this.GetComponent<SpriteRenderer>().flipX = false;
+
+            Ani.SetInteger("Near Attack Int", 4);
+        }
+
+        if (angle >= -45 && angle < 45)
+        {
+            this.GetComponent<SpriteRenderer>().flipX = false;
+
+            Ani.SetInteger("Near Attack Int", 4);
+        }
     }
 
     // Update is called once per frame
@@ -36,27 +66,27 @@ public class Weapon : MonoBehaviour
             
             return;
         }
-        float angle = GetAngle(this.transform.position, Wuser.transform.position);
+       /*  float angle = GetAngle(this.transform.position, Wuser.transform.position);
 
         if (angle >= -135 && angle < -45)
         {
             this.GetComponent<SpriteRenderer>().flipY = false;
 
-            Ani.SetInteger("Near Attack Int", 0);
+            Ani.SetInteger("Near Attack Int", 2);
         }
 
         if (angle >= 45 && angle < 135)
         {
             this.GetComponent<SpriteRenderer>().flipY = true;
 
-            Ani.SetInteger("Near Attack Int", 0);
+            Ani.SetInteger("Near Attack Int", 2);
         }
 
         if (angle >= 135 || angle < -135)
         {
             this.GetComponent<SpriteRenderer>().flipX = false;
 
-            Ani.SetInteger("Near Attack Int", 1);
+            Ani.SetInteger("Near Attack Int", 4);
         }
 
         if (angle >= -45 && angle < 45)
@@ -64,7 +94,7 @@ public class Weapon : MonoBehaviour
             this.GetComponent<SpriteRenderer>().flipX = false;
 
             Ani.SetInteger("Near Attack Int", 1);
-        }
+        }*/
     }
 
     float GetAngle(Vector2 position, Vector2 targetPoint)
