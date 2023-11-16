@@ -27,6 +27,7 @@ public class Portal : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("ok");
+            AudioManager.instance_AudioManager.StopBGM();
             SceneManager.LoadScene(this.scene_name);
         }
     }

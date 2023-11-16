@@ -26,6 +26,7 @@ public class ToTitle : MonoBehaviour
                 if (col == Title.GetComponent<Collider2D>())
                 {
                     AudioManager.instance_AudioManager.PlaySE(4, 1);
+                    AudioManager.instance_AudioManager.StopBGM();
                     SceneManager.LoadScene("Title");
                 }
             }
