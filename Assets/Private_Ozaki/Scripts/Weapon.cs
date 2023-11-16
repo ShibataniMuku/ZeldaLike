@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
          }
     }
         // Start is called before the first frame update
-        void Start()
+    void Start()
     {
         StartCoroutine(DelayCoroutine());
 
@@ -30,6 +30,12 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Wuser == null) 
+        { 
+            Destroy(this.gameObject);
+            
+            return;
+        }
         float angle = GetAngle(this.transform.position, Wuser.transform.position);
 
         if (angle >= -135 && angle < -45)

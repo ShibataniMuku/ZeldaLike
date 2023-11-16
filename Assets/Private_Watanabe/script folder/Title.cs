@@ -15,8 +15,9 @@ public class Title : MonoBehaviour
     public void PressStart()
     { 
         Debug.Log("Press Start");
-        if (!firstPush)
-     {
+        if(!firstPush)
+        {
+            AudioManager.instance_AudioManager.PlaySE(4,1);
             Debug.Log("Go Next Scene!");
             SceneManager.LoadScene("StageSelect");
             firstPush = true;

@@ -27,6 +27,12 @@ EditorBuildSettings:
     path: Assets/Private_Watanabe/Stage.unity
     guid: e3b95526424889c4993172c9520dc2c5
   - enabled: 1
+    path: Assets/Private_Nishigami/Scenes/Sample.unity
+    guid: cf76281405eac7d46ba486b7a12c9145
+  - enabled: 1
     path: Assets/Private_Watanabe/result.unity
     guid: 7520b5c14e75ea04facc8fbd05fc0d07
+  - enabled: 1
+    path: Assets/Private_Watanabe/New Scene.unity
+    guid: b4bb88716a08d8f4bab17511ef6ecd88
   m_configObjects: {}

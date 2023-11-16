@@ -118,7 +118,8 @@ public class MoveController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-           GameObject g = Instantiate(PunchPrefab, transform.position, Quaternion.identity);
+            AudioManager.instance_AudioManager.PlaySE(0, 1);
+            GameObject g = Instantiate(PunchPrefab, transform.position, Quaternion.identity);
 
             Vector2 vec2 = Vector2.zero;
 
@@ -127,7 +128,7 @@ public class MoveController : MonoBehaviour
             if (direction == 0)
             {
                 vec2 = new Vector2(0, 1);
-                anim.SetBool("Uattack", true);
+                anim.SetBool("Ushot", true);
             }
             else if (direction == 1)
             {
@@ -151,7 +152,7 @@ public class MoveController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
             stop = false;
-            anim.SetBool("Uattack", false);
+            anim.SetBool("Ushot", false);
             anim.SetBool("Rshot", false);
             anim.SetBool("Dshot", false);
             anim.SetBool("Lshot", false);
@@ -160,6 +161,8 @@ public class MoveController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            AudioManager.instance_AudioManager.PlaySE(0, 0);
+
             GameObject g = Instantiate(punch2Prefab, transform.position, Quaternion.identity);
 
             Vector2 vec2 = Vector2.zero;

@@ -15,6 +15,12 @@ public class Hontai : MonoBehaviour
     int damage = 10;
 
     private Animator Anim = null;
+    
+    private AudioSource sound1;
+    
+    private AudioSource sound2;
+    
+    private AudioSource sound3;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -35,6 +41,14 @@ public class Hontai : MonoBehaviour
         StartCoroutine(DelayCoroutine());
 
         Anim = GetComponent<Animator>();
+
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+
+        sound1 = audioSources[0];
+        
+        sound2 = audioSources[1];
+        
+        sound3 = audioSources[2];
     }
 
     private void Update()
@@ -107,7 +121,9 @@ public class Hontai : MonoBehaviour
 
                 //transform.DOMove(player.transform.position, 1f).SetEase(Ease.Linear).SetLoops(1, LoopType.Yoyo);
                 myRigidbody2D.AddForce((player.transform.position - this.transform.position).normalized * power, ForceMode2D.Impulse);
-               // Debug.Log("aa");
+                // Debug.Log("aa");
+
+                sound3.PlayOneShot(sound3.clip);
             }
 
             else if (Vector2.Distance(this.transform.position, player.transform.position) > 3f)

@@ -14,7 +14,7 @@ public class ToResultPortal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Result");
+            SceneManager.LoadScene("Stage1");
         }
     }
         // Update is called once per frame

@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: AudioData_Watanabe
   m_EditorClassIdentifier: 
   SE_Data:
-  - id: 0
-    clip: {fileID: 0}
-    volume: 0
+  - id: 1
+    clip: {fileID: 8300000, guid: ce02312735c88b341ade994297dd32c2, type: 3}
+    volume: 1
     memo: 
-  BGM_Data: []
+  BGM_Data:
+  - id: 2
+    clip: {fileID: 8300000, guid: af83ef31089084e44a214d2ccad3c05e, type: 3}
+    volume: 0.45
+    memo: 
+  - id: 3
+    clip: {fileID: 8300000, guid: ca233e7db130f784a8017b738b4499a2, type: 3}
+    volume: 0.45
+    memo: 
