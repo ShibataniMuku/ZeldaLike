@@ -7,16 +7,18 @@ public class Gauge : MonoBehaviour
 {
     public int max;
     public int HP;
+    private PlayerStatus playerStatus;
     public Image curImg;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerStatus = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        HP=playerStatus.GetHP();
         if(max > 0)
         {
             if(HP > max)
