@@ -91,6 +91,8 @@ public class Nearattack : MonoBehaviour
             else
             {
                 Anim.SetInteger("Walk int", 1);
+
+                Anim.SetInteger("Attack Int", 0);
             }
         }
 
@@ -108,6 +110,8 @@ public class Nearattack : MonoBehaviour
             else
             {
                 Anim.SetInteger("Walk int", 2);
+
+                Anim.SetInteger("Attack Int", 0);
             }
         }
 
@@ -140,6 +144,8 @@ public class Nearattack : MonoBehaviour
             else
             {
                 Anim.SetInteger("Walk int", 4);
+
+                Anim.SetInteger("Attack Int", 0);
             }
         }
     }
