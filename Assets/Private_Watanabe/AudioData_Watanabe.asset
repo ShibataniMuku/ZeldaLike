@@ -17,4 +17,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ce02312735c88b341ade994297dd32c2, type: 3}
     volume: 1
     memo: 
-  BGM_Data: []
+  BGM_Data:
+  - id: 2
+    clip: {fileID: 0}
+    volume: 0
+    memo: 
