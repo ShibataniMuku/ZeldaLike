@@ -81,17 +81,22 @@ public class Nearattack : MonoBehaviour
 
         if (angle >= -135 && angle < -45)
         {
-            Anim.SetInteger("Walk int", 1);
+            
 
             if (Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
             {
                 Anim.SetInteger("Attack Int", 1);
             }
+
+            else
+            {
+                Anim.SetInteger("Walk int", 1);
+            }
         }
 
         if (angle >= 45 && angle < 135)
         {
-            Anim.SetInteger("Walk int", 2);
+            
 
             //Debug.Log("Šp“xŽæ“¾");
 
@@ -99,25 +104,42 @@ public class Nearattack : MonoBehaviour
             {
                 Anim.SetInteger("Attack Int", 2);
             }
+
+            else
+            {
+                Anim.SetInteger("Walk int", 2);
+            }
         }
 
         if (angle >= 135 || angle < -135)
         {
-            Anim.SetInteger("Walk int", 3);
+           
 
             if (Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
             {
                 Anim.SetInteger("Attack Int", 3);
             }
+
+            else
+            {
+                Anim.SetInteger("Walk int", 3);
+
+                Anim.SetInteger("Attack Int", 0);
+            }
         }
 
         if (angle >= -45 && angle < 45)
         {
-            Anim.SetInteger("Walk int", 4);
+            
 
             if (Vector2.Distance(this.transform.position, player.transform.position) <= 3f)
             {
                 Anim.SetInteger("Attack Int", 4);
+            }
+
+            else
+            {
+                Anim.SetInteger("Walk int", 4);
             }
         }
     }
@@ -141,7 +163,7 @@ public class Nearattack : MonoBehaviour
 
         isactiveCoroutine = true;
 
-        GameObject w = Instantiate(weapon, this.transform.position + ((targetPoint.position - this.transform.position).normalized) * 1.25f, Quaternion.Euler(new Vector3(0,0,-rotation)));
+        GameObject w = Instantiate(weapon, this.transform.position + ((targetPoint.position - this.transform.position).normalized) * 1.25f, Quaternion.identity);
 
         w.GetComponent<Weapon>().Wuser = this.gameObject;
 

@@ -128,6 +128,8 @@ public class Hontai : MonoBehaviour
 
             else if (Vector2.Distance(this.transform.position, player.transform.position) > 3f)
             {
+                Anim.SetInteger("Rush Int", 4);
+
                 GetComponent<Rush>().enabled = true;
 
                 enabled = false;

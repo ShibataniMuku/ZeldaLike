@@ -120,6 +120,8 @@ public class Rush : MonoBehaviour
 
         GetComponent<Hontai>().enabled = true;
 
+        Anim.SetInteger("Walk Int", 4);
+
         enabled = false;
 
         isactiveCoroutine = false;
