@@ -1511,7 +1511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage_number: -999
-  scene_name: Stage
+  scene_name: Stage1
   open_sprite: {fileID: 21300828, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
   close_sprite: {fileID: 21300824, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
 --- !u!1 &887590723
@@ -1849,7 +1849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage_number: 2
-  scene_name: Stage_2
+  scene_name: Stage2
   open_sprite: {fileID: 21300828, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
   close_sprite: {fileID: 21300824, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
 --- !u!58 &969597143
@@ -2490,7 +2490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage_number: 3
-  scene_name: Stage_3
+  scene_name: Stage3
   open_sprite: {fileID: 21300828, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
   close_sprite: {fileID: 21300824, guid: 31e24ed712cbf3b4595a8dbc9b18aa9c, type: 3}
 --- !u!58 &1842518346
