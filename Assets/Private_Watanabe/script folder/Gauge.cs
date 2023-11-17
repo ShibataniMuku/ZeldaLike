@@ -18,7 +18,8 @@ public class Gauge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HP=playerStatus.GetHP();
+        HP = playerStatus.GetHP();
+
         if(max > 0)
         {
             if(HP > max)

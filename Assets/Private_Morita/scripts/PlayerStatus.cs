@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -23,21 +24,23 @@ public class PlayerStatus : MonoBehaviour
     public void decreaseHP(int amount)
     {
         Debug.Log("decreaseHP‚ª‚æ‚Î‚ê‚½");
+
         //HP = HP - amount;
         HP -= Mathf.Abs(amount);
         AudioManager.instance_AudioManager.PlaySE(0, 2);
-
     }
     // Update is called once per frame
     void Update()
     {
         if (HP <= 0)
         {
-            Destroy(gameObject);
+            Death();
+            //Destroy(gameObject);
         }
     }
+
     public void Death()
     {
-
+        SceneManager.LoadScene("GameOver");
     }
 }

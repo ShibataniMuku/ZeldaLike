@@ -19,6 +19,8 @@ namespace nishigami
         // Update is called once per frame
         void Update()
         {
+            if (Player == null) { return; }
+
             Vector3 playerpos = Player.transform.position;
 
             transform.position = new Vector3(playerpos.x, playerpos.y, z);
