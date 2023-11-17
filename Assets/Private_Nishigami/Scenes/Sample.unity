@@ -171,9 +171,7 @@ MonoBehaviour:
   goal: {fileID: 1165003900}
   wall: {fileID: 4299713256620431113, guid: 6b5fe21bba7223c4ab5a8505df21d3ff, type: 3}
   path: {fileID: 3855134539486266554, guid: 35788712ec999714187aa62b4c8457bd, type: 3}
-  enemies:
-  - {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
-  - {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+  enemies: []
 --- !u!1 &297286275
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +395,7 @@ GameObject:
   - component: {fileID: 1281550027}
   - component: {fileID: 1281550026}
   - component: {fileID: 1281550025}
+  - component: {fileID: 1281550028}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -478,6 +477,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1281550028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281550024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb14d267726b2f6419f63f65ee5b0d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1276922375}
+  z: -10
 --- !u!1001 &71903410561402483
 PrefabInstance:
   m_ObjectHideFlags: 0
