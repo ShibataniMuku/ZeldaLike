@@ -6,6 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Private_Watanabe/Title.unity
+    guid: e00995b5b8f26f249bea3ebb14af51df
+  - enabled: 1
+    path: Assets/Private_Watanabe/StageSelect.unity
+    guid: 2a57d58a60879634684725a65e9a8520
+  - enabled: 1
+    path: Assets/Private_Shibatani/Stage1.unity
+    guid: e2ffe832917bcd8468bdefe8bad8cc2b
+  - enabled: 1
+    path: Assets/Private_Nishigami/Scenes/Stage2.unity
+    guid: cf76281405eac7d46ba486b7a12c9145
+  - enabled: 1
+    path: Assets/Private_Shibatani/Stage3.unity
+    guid: 79e6eaee7d188ef48a0ff1834d1087ba
+  - enabled: 1
+    path: Assets/Private_Nishigami/Scenes/GameOver.unity
+    guid: 81c0998c68497a0428d8515b533498b1
+  - enabled: 1
+    path: Assets/Private_Watanabe/Stage.unity
+    guid: e3b95526424889c4993172c9520dc2c5
+  - enabled: 1
+    path: Assets/Private_Watanabe/result.unity
+    guid: 7520b5c14e75ea04facc8fbd05fc0d07
+  - enabled: 1
+    path: Assets/Private_Watanabe/New Scene.unity
+    guid: b4bb88716a08d8f4bab17511ef6ecd88
+  - enabled: 1
     path: Assets/UnityChan2D/Demo/Scenes/Start.unity
     guid: b763c98f277cc420aa68ceb3fc0daf82
   - enabled: 1
@@ -17,31 +44,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/UnityChan2D/Demo/Scenes/World 1-1.unity
     guid: bc1bc11bd56944cb68646a65a5fff077
-  - enabled: 1
-    path: Assets/Private_Watanabe/Title.unity
-    guid: e00995b5b8f26f249bea3ebb14af51df
-  - enabled: 1
-    path: Assets/Private_Watanabe/StageSelect.unity
-    guid: 2a57d58a60879634684725a65e9a8520
-  - enabled: 1
-    path: Assets/Private_Watanabe/Stage.unity
-    guid: e3b95526424889c4993172c9520dc2c5
-  - enabled: 1
-    path: Assets/Private_Nishigami/Scenes/Stage2.unity
-    guid: cf76281405eac7d46ba486b7a12c9145
-  - enabled: 1
-    path: Assets/Private_Watanabe/result.unity
-    guid: 7520b5c14e75ea04facc8fbd05fc0d07
-  - enabled: 1
-    path: Assets/Private_Watanabe/New Scene.unity
-    guid: b4bb88716a08d8f4bab17511ef6ecd88
-  - enabled: 1
-    path: Assets/Private_Shibatani/Stage1.unity
-    guid: e2ffe832917bcd8468bdefe8bad8cc2b
-  - enabled: 1
-    path: Assets/Private_Shibatani/Stage3.unity
-    guid: 79e6eaee7d188ef48a0ff1834d1087ba
-  - enabled: 1
-    path: Assets/Private_Nishigami/Scenes/GameOver.unity
-    guid: 81c0998c68497a0428d8515b533498b1
   m_configObjects: {}
