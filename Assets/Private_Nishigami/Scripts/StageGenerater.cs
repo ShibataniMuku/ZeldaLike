@@ -22,6 +22,8 @@ public class StageGenerater : MonoBehaviour
     [SerializeField] private GameObject wall = null;
     [SerializeField] private GameObject path = null;
 
+    [SerializeField] private GameObject[] enemies = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,22 @@ public class StageGenerater : MonoBehaviour
 
         player.transform.position = start_pos;
         goal.transform.position = goal_pos;
+
+        /*for (int x = 0; x < this.field.GetLength(0); x++)
+        {
+            for (int y = 0; y < this.field.GetLength(1); y++)
+            {
+                if (this.field[x, y] == 0) { continue; }
+
+                int number = UnityEngine.Random.Range(0, 10);
+
+                if (number == 0)
+                {
+                    Vector3 pos = new Vector3(x * 3, y * 3, 0);
+                    Instantiate(this.enemies[UnityEngine.Random.Range(0, this.enemies.Length)], pos, Quaternion.identity);
+                }
+            }
+        }*/
     }
 
     private void Dig(int x, int y)

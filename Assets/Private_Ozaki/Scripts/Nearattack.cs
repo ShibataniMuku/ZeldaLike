@@ -32,6 +32,8 @@ public class Nearattack : MonoBehaviour
         this.targetPoint = route[0];
 
         Anim = GetComponent<Animator>();
+
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame

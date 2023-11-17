@@ -15,6 +15,11 @@ public class Enemyattack : MonoBehaviour
     private float targetTime = 1.0f;
     private float currentTime = 0;
 
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
+
     // Update is called once per frame
     void Update()
     {
