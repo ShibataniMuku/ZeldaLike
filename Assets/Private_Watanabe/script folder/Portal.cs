@@ -11,24 +11,41 @@ public class Portal : MonoBehaviour
     [SerializeField] private Sprite open_sprite = null;
     [SerializeField] private Sprite close_sprite = null;
 
+    //[SerializeField] private CircleCollider2D circleCollider2D = null;
+
 
     // Start is called before the first frame update
     void Start()
     {
         this.sprite_renderer = this.gameObject.GetComponent<SpriteRenderer>();
+        //this.circleCollider2D = this.gameObject.GetComponent<CircleCollider2D>();
 
         bool did_clear_stage = DataManager.dataManager.getDidClearStage(this.stage_number);
 
-        this.sprite_renderer.sprite = (did_clear_stage) ? this.open_sprite : this.close_sprite;
+        if (did_clear_stage)
+        {
+            this.sprite_renderer.sprite = this.open_sprite;
+        }
+        else
+        {
+            this.sprite_renderer.sprite = this.close_sprite;
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        bool did_clear_stage = DataManager.dataManager.getDidClearStage(this.stage_number);
+
+        if (collision.gameObject.CompareTag("Player") && did_clear_stage)
         {
             Debug.Log("ok");
             AudioManager.instance_AudioManager.StopBGM();
             SceneManager.LoadScene(this.scene_name);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        
     }
 }
