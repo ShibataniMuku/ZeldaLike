@@ -25,14 +25,23 @@ public class Enemy : MonoBehaviour
     {
         this.myRigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
 
-        this.targetPoint = route[0];
+        if (route.Length != 0 || route[0] != null)
+        {
+            this.targetPoint = route[0];
+        }
+
+        
 
         Anim = GetComponent<Animator>();
+
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (targetPoint == null) { return; }
+
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
         if (distance <= 5f)
         {
@@ -48,17 +57,22 @@ public class Enemy : MonoBehaviour
             targetPoint = this.route[index];
         }
 
-        if (Vector2.Distance(this.transform.position, targetPoint.position) <= 0.25f)
+        if (route.Length != 0 || route[0] != null)
         {
-            this.index++;
-
-            if (index >= this.route.Length)
+            if (Vector2.Distance(this.transform.position, targetPoint.position) <= 0.25f)
             {
-                index = 0;
-            }
+                this.index++;
 
-            targetPoint = this.route[index];
+                if (index >= this.route.Length)
+                {
+                    index = 0;
+                }
+
+                targetPoint = this.route[index];
+            }
         }
+
+        
 
         if (this.moveSpeed <= 0 && isactiveCoroutine == false)
         {
@@ -137,6 +151,9 @@ public class Enemy : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
+        if (route.Length == 0 || route[0] == null) { return; }
+
         Vector2 direction = Vector2.zero;
 
         // targetPointへのベクトルを取得し､directionに代入する処理を書く。

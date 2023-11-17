@@ -39,6 +39,9 @@ public class Nearattack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (targetPoint == null) { return; }
+
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
 
         Vector2 dir = Vector2.zero;
@@ -157,6 +160,9 @@ public class Nearattack : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
+        if (targetPoint == null) { return; }
+
         Vector2 direction = Vector2.zero;
 
         // targetPointへのベクトルを取得し､directionに代入する処理を書く。
