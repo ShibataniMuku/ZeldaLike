@@ -59,7 +59,7 @@ public class MoveController : MonoBehaviour
         {
             dash = false;
         }*/
-        dash = Input.GetKey(KeyCode.RightShift);
+        dash = Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift);
 
         // x,ｙの入力値を得る
         // それぞれ+や-の値と入力の関連付けはInput Managerで設定されている
@@ -149,6 +149,7 @@ public class MoveController : MonoBehaviour
 
             stop = true;
         }
+
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
             stop = false;
@@ -157,6 +158,7 @@ public class MoveController : MonoBehaviour
             anim.SetBool("Dshot", false);
             anim.SetBool("Lshot", false);
         }
+
         //stop = Input.GetKey(KeyCode.RightArrow);
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -196,6 +198,7 @@ public class MoveController : MonoBehaviour
 
             stop = true;
         }
+
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
             stop = false;
@@ -206,6 +209,7 @@ public class MoveController : MonoBehaviour
             transform.localScale = new Vector2(1, 1);
 
         }
+
         //mySpriteRenderer.sprite.texture = standSprite[direction];
         //Debug.Log(direction);
        
