@@ -28,12 +28,17 @@ public class Enemy : MonoBehaviour
         this.targetPoint = route[0];
 
         Anim = GetComponent<Animator>();
+
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (this.route[0] == null || this.player == null) { return; }
+
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
+
         if (distance <= 5f)
         {
             targetPoint = player.transform;
@@ -137,6 +142,9 @@ public class Enemy : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
+        if (this.route[0] == null || this.player == null || targetPoint == null) { return; }
+
         Vector2 direction = Vector2.zero;
 
         // targetPointへのベクトルを取得し､directionに代入する処理を書く。
