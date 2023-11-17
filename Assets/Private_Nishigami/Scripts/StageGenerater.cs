@@ -15,7 +15,6 @@ public class StageGenerater : MonoBehaviour
 
     // 0 => •Ç
     // 1 => ’Ê˜H
-    // 
     [SerializeField] private int[,] field = new int[fieldSize, fieldSize];
 
 
