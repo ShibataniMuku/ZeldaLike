@@ -23,6 +23,7 @@ public class Enemyattack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Vector2.Distance(this.transform.position, player.transform.position) <= 3.5f)
         { 
             //ˆê•bŒo‚Â‚²‚Æ‚É’e‚ð”­ŽË‚·‚é

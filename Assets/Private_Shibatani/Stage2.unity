@@ -179,6 +179,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -240,6 +247,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: tossin (6)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 7161419292244369291, guid: a6a57db6a7e6d104b9a314fd47d63fb7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7280,6 +7294,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (3)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7341,6 +7362,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: tossin (5)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 7161419292244369291, guid: a6a57db6a7e6d104b9a314fd47d63fb7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8751,6 +8779,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: tossin (4)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 7161419292244369291, guid: a6a57db6a7e6d104b9a314fd47d63fb7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8812,6 +8847,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -106589,6 +106631,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (4)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -106650,6 +106699,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (7)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -106711,6 +106767,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (1)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -106864,6 +106927,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (2)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -106925,6 +106995,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (5)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -106986,6 +107063,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (9)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107047,6 +107131,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (6)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107108,6 +107199,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (2)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107169,6 +107267,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (9)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107230,6 +107335,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (10)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107356,6 +107468,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: tossin
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 7161419292244369291, guid: a6a57db6a7e6d104b9a314fd47d63fb7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     - target: {fileID: 9193367702776009433, guid: a6a57db6a7e6d104b9a314fd47d63fb7, type: 3}
       propertyPath: MinDistance
       value: 0.5704043
@@ -107421,6 +107540,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (10)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107482,6 +107608,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: tossin (1)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 7161419292244369291, guid: a6a57db6a7e6d104b9a314fd47d63fb7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -108417,6 +108550,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (3)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -110499,6 +110639,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (1)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -110560,11 +110707,86 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (8)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+--- !u!1001 &1678407869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1615279143682517565, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149594170968753529, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798243093225551558, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a20e64d2b45ab5e4f9607f381ff51451, type: 3}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
 --- !u!1001 &1709174570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110621,6 +110843,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (4)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -110682,6 +110911,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (5)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -110743,6 +110979,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (8)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -110804,6 +111047,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: enkyori (7)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 5165687024928040646, guid: b200e6428832bf7469d02f5333b1c119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -110865,6 +111115,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: tossin (2)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 7161419292244369291, guid: a6a57db6a7e6d104b9a314fd47d63fb7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -111144,6 +111401,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: tossin (3)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 7161419292244369291, guid: a6a57db6a7e6d104b9a314fd47d63fb7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -111205,6 +111469,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: kinsetu (6)
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Private_Shibatani/Stage2.unity
+=======
+    - target: {fileID: 6795695232634944871, guid: e6eba81fbc46f974eb3fb97ea04439ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Private_Shibatani/Stage3.unity
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
