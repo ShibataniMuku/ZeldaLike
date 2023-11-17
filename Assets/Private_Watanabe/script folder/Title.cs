@@ -18,6 +18,7 @@ public class Title : MonoBehaviour
         if(!firstPush)
         {
             AudioManager.instance_AudioManager.PlaySE(4,1);
+            AudioManager.instance_AudioManager.StopBGM();
             Debug.Log("Go Next Scene!");
             SceneManager.LoadScene("StageSelect");
             firstPush = true;
@@ -26,7 +27,8 @@ public class Title : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioManager.instance_AudioManager.PlayBGM(4, 4);
+
     }
 
     // Update is called once per frame
