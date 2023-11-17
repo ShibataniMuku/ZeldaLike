@@ -164,7 +164,7 @@ public class MoveController : MonoBehaviour
             AudioManager.instance_AudioManager.PlaySE(0, 0);
 
             GameObject g = Instantiate(punch2Prefab, transform.position, Quaternion.identity);
-
+            Debug.Log("attack");
             Vector2 vec2 = Vector2.zero;
 
             //ここに、方向（direction）によって、vec2に値を代入する処理を書く。
